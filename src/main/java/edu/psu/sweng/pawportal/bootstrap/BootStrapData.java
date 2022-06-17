@@ -19,9 +19,9 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Customer john = new Customer("John", "Johnson", "3239892345", "someGuy@skymail.com", "Timbuktu");
-        Dog lily = new Dog("Lily", john, "Golden Retriever", 3, 60.0, "Golden Yellow", 1, "N/a");
-        Dog sam = new Dog("Sam", john, "Pug", 1, 15.0, "Tan", 2, "Likes to lick everything");
+        Customer john = new Customer();
+        Dog lily = new Dog();
+        Dog sam = new Dog();
         john.getDogs().add(lily);
         john.getDogs().add(sam);
         customerRepository.save(john);
