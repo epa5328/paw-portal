@@ -8,9 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class UserController {
 
-    @RequestMapping (value = "/homepage", method = RequestMethod.POST)
-    @ResponseBody
+    @RequestMapping ("/homepage")
     public String homePage(){
-        return "homepage";
+        return "homepage.html";
     }
 }
