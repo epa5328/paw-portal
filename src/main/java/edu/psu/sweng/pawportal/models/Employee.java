@@ -10,4 +10,6 @@ public class Employee extends Person{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    public boolean isManager;
 }
