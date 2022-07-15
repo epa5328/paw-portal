@@ -14,7 +14,7 @@ PROTECT PAGE
 <head>
 	<title> Contact Us </title>
 	<meta charset="utf-8">
-	<link href="cybersecurity.css" rel="stylesheet" type="text/css"  />
+	<link href="../static/css/cybersecurity.css" rel="stylesheet" type="text/css" th:href="@{css/cybersecurity.css}" />
 	<link media="print" href="print.css">
 </head>
 <a name = "top"></a>
@@ -85,7 +85,7 @@ Required fields are marked with an asterisk (*).
 </div>
  <div id="links">
  
- <img src = "dog on phone.png" height = "auto" width = "100%" alt = "Contact Us">
+ <img src = "../static/images/dog_on_phone.png" height = "auto" width = "100%" alt = "Contact Us" th:src="@{images/dog_on_phone.png}" >
  </div>
 </main>
 
