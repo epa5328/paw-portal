@@ -19,6 +19,14 @@ public class UserController {
     public String homePage(){
         return "homepage.html";
     }
+    @RequestMapping ( "/landing")
+    public String landingPage(){
+        return "landing.html";
+    }
+    @RequestMapping ( "/contact_us")
+    public String contactPage(){
+        return "contact_us.html";
+    }
     @GetMapping( "/Register")
     public String CreateNewUser(Model model){
         model.addAttribute("Customer", new Customer());
