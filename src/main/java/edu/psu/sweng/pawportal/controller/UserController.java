@@ -17,20 +17,20 @@ public class UserController {
 
     @RequestMapping ( "/homepage")
     public String homePage(){
-        return "homepage.html";
+        return "homepage";
     }
     @RequestMapping ( "/landing")
     public String landingPage(){
-        return "landing.html";
+        return "landing";
     }
     @RequestMapping ( "/contact_us")
     public String contactPage(){
-        return "contact_us.html";
+        return "contact_us";
     }
-    @GetMapping( "/Register")
+    @GetMapping( "/register")
     public String CreateNewUser(Model model){
         model.addAttribute("Customer", new Customer());
-        return "CustomerRegistration.html";
+        return "CustomerRegistration";
     }
 
     @PostMapping("/registration_processed")
@@ -39,6 +39,6 @@ public class UserController {
         String encodedPassword = encoder.encode(customer.getPassword());
         customer.setPassword(encodedPassword);
         repo.save(customer);
-        return "RegistrationSuccessful.html";
+        return "RegistrationSuccessful";
     }
 }
