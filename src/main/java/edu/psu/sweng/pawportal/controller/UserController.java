@@ -41,4 +41,16 @@ public class UserController {
         repo.save(customer);
         return "RegistrationSuccessful";
     }
+    /*
+    @PostMapping("/login") // method is written in pseudocode style; modify into proper Java code later
+    public String GetEmail(User user) {
+        // use SQL query to grab user.type given inputted email
+        if (user.type == 0) {// 0 = customer
+            return "redirect: /customerMainPage";
+        } else if (user.type == 1) {
+            return "redirect: /employeeMainPage";
+        }
+        return "redirect: /emailNotExist";
+    }
+     */
 }
