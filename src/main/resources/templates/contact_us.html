@@ -12,11 +12,15 @@ CONTACT INFO PAGE
 	<title> Contact Us </title>
 	<meta charset="utf-8">
 	<link href="../static/css/cybersecurity.css" rel="stylesheet" type="text/css" th:href="@{css/cybersecurity.css}" />
-	<link media="print" href="print.css">
+	<!--<link media="print" href="print.css"> -->
 </head>
-<a name = "top"></a>
+<a id = "top"></a>
 <body>
 <style>
+	img {
+		width: 100%;
+		height: auto;
+	}
 </style>
 <div id="wrapper">
 <header>
@@ -62,14 +66,22 @@ Required fields are marked with an asterisk (*).
 	<input type = "date" name = "date" id = "Date" value = ""> 
 <br>
 
-<br> 
-	<input checked="checked" name="newsletter" type="radio" value="question" /> Question? 
-	<input name="newsletter" type="radio" value="comment" /> Comment
-	<input name="newsletter" type="radio" value="other" /> Other
 <br>
-	<textarea cols="40" name="comments" rows="5">Your Question, Comment or Other</textarea>
+	<label>
+		<input checked="checked" name="newsletter" type="radio" value="question" />
+	</label> Question?
+	<label>
+		<input name="newsletter" type="radio" value="comment" />
+	</label> Comment
+	<label>
+		<input name="newsletter" type="radio" value="other" />
+	</label> Other
+<br>
+	<label>
+		<textarea cols="40" name="comments" rows="5">Your Question, Comment or Other</textarea>
+	</label>
 
-<br><br>
+	<br><br>
 
 <label><input name="terms" type="checkbox" value="tandc" required="required"/>Accept terms and Privacy Policy </label> 
 
@@ -82,7 +94,7 @@ Required fields are marked with an asterisk (*).
 </div>
  <div id="links">
  
- <img src = "../static/images/dog_on_phone.png" height = "auto" width = "100%" alt = "Contact Us" th:src="@{images/dog_on_phone.png}" >
+ <img src = "../static/images/dog_on_phone.png" height = "784" width = "1362" alt = "Contact Us" th:src="@{images/dog_on_phone.png}" >
  </div>
 </main>
 
