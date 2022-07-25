@@ -10,7 +10,7 @@ main {padding :3%;}
 header {  
 height: 100%; 
 background-image: linear-gradient(to left, white, black);
-padding-top:0;
+padding-top:0%;
 display:block;}
 
 h1 { 
