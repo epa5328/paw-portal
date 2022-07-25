@@ -10,30 +10,30 @@ Pet PAGE
 
 <head>
 	<title> My Paws </title>
-	<link rel="icon" href="logo.png">
+	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet" type="text/css"  />
-	<link media="print" href="print.css">
+	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
 </head>
-<a name = "top"></a>
+<a id = "top"></a>
 <body>
 <div id="wrapper">
 <header>
-<h1> My Paws <h1>
+<h1> My Paws </h1>
 </header>
 
 <nav>
 
-<a href = "index.html"> Home </a> &nbsp;
+<a href = "/"> Home </a> &nbsp;
 
-<a href = "Appointment.html"> Appointments </a> &nbsp;
+<a href = "/appointment"> Appointments </a> &nbsp;
 
-<a href = "account.html"> My Account </a> &nbsp;
+<a href = "/account"> My Account </a> &nbsp;
 
-<a href = "paws.html"> Paws </a> &nbsp;
+<a href = "/paws"> Paws </a> &nbsp;
 
-<a href = "contact us.html"> Contact Us  </a> 
+<a href = "/contact_us"> Contact Us  </a>
 
 </nav>
 
@@ -41,9 +41,9 @@ Pet PAGE
 
 <div id="intro" >
 
-<div id="AccInfo">
+<div id="AccInfo1">
 <h2>Pet 1 Information: </h2>
-<img src="dog.jpg" height= "30%" width = "30%" alt = "Dogs Profile Picture" />
+<img src="../static/images/dog.jpg" style="height:30%;width:30%" height= "228" width = "221" alt = "Dogs Profile Picture" th:src="@{images/dog.jpg}"/>
 <p>
 Name: First Last 
 <br><br>
@@ -59,12 +59,12 @@ Height:
 <br><br>
 Note: 
 </p>
-<a href="#"> Edit Information </a></p>
+<a href="#"> Edit Information </a>
 </div>
 
-<div id="AccInfo">
+<div id="AccInfo2">
 <h2>Pet 2 Information: </h2>
-<img src="puppy.jpg" height= "30%" width = "30%" alt = "Dogs Profile Picture" />
+<img src="../static/images/puppy.jpg" style="height:30%;width:30%" height= "183" width = "275" alt = "Dogs Profile Picture" th:src="@{images/puppy.jpg}"/>
 <p>
 Name: First Last 
 <br><br>
@@ -80,10 +80,10 @@ Height:
 <br><br>
 Note: 
 </p>
-<a href="#"> Edit Information </a></p>
+<a href="#"> Edit Information </a>
 </div>
 
-</p>
+
 
 
 

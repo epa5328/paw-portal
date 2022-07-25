@@ -10,29 +10,29 @@ Appointment PAGE
 
 <head>
 	<title> My Appointments </title>
-	<link rel="icon" href="logo.png">
+	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet" type="text/css"  />
-	<link media="print" href="print.css">
+	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
 </head>
-<a name = "top"></a>
+<a id = "top"></a>
 <body>
 <div id="wrapper">
 <header>
-<h1> Schedule Appointments <h1>
+<h1> Schedule Appointments </h1>
 </header>
 
 <nav>
-<a href = "index.html"> Home </a> &nbsp;
+<a href = "/"> Home </a> &nbsp;
 
-<a href = "appointment.html"> Appointments </a> &nbsp;
+<a href = "/appointment"> Appointments </a> &nbsp;
 
-<a href = "account.html"> My Account </a> &nbsp;
+<a href = "/account"> My Account </a> &nbsp;
 
-<a href = "paws.html"> Paws </a> &nbsp;
+<a href = "/paws"> Paws </a> &nbsp;
 
-<a href = "contact us.html"> Contact Us  </a> 
+<a href = "/contact_us"> Contact Us  </a>
  
 </nav>
 
@@ -43,6 +43,7 @@ Appointment PAGE
 
 <div id="AccInfo">
 <p>
+</p>
 <h2>Previous Appointments:</h2>
 
 <br><br>
@@ -68,7 +69,7 @@ Thursday &nbsp; @ 8:00 PM &nbsp; Walk 2hrs
 Friday &nbsp; @ 6:00 PM &nbsp; Feed 1 Meal
 <br><br>
 Sunday &nbsp; @ 12:00 PM &nbsp; Pet Sitting 8hrs
-</p>
+
 </div>
 </div>
 
@@ -79,9 +80,12 @@ Sunday &nbsp; @ 12:00 PM &nbsp; Pet Sitting 8hrs
 =1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=cG9ydGFscGF3NTMyQGdtYWl
 sLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGU
 uY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color
-=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777"
- width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
+=%23039BE5&color=%2333B679&color=%230B8043" style="border:none;overflow:hidden"
+ width="800" height="600"></iframe>
+	<!--
+    style border was set to solid 1px #777 yet "frameborder" was 0?
+    scrolling="no" replaced with overflow:hidden
+     -->
 </div>
 
 

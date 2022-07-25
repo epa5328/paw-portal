@@ -15,9 +15,9 @@ public class UserController {
     @Autowired
     public CustomerRepository repo;
 
-    @RequestMapping ( "/homepage")
+    @RequestMapping ( "/home")
     public String homePage(){
-        return "homepage";
+        return "home";
     }
     @RequestMapping ( "/landing")
     public String landingPage(){
@@ -26,6 +26,22 @@ public class UserController {
     @RequestMapping ( "/contact_us")
     public String contactPage(){
         return "contact_us";
+    }
+    @RequestMapping ( "/account")
+    public String accountPage(){
+        return "account";
+    }
+    @RequestMapping ( "/appointment")
+    public String appointmentPage(){
+        return "appointment";
+    }
+    @RequestMapping ( "/paws")
+    public String pawsPage(){
+        return "paws";
+    }
+    @RequestMapping ( "/signup")
+    public String signUpPage(){
+        return "signup";
     }
     @GetMapping( "/register")
     public String CreateNewUser(Model model){

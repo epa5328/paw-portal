@@ -10,29 +10,29 @@ Landing/login PAGE
 
 <head>
 	<title> Paw Portal </title>
-	<link rel="icon" href="logo.png">
+	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet" type="text/css"  />
-	<link media="print" href="print.css">
+	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
 </head>
-<a name = "top"></a>
+<a id = "top"></a>
 <body>
 <div id="wrapper">
 <header>
-<h1> Paw Portal <h1>
+<h1> Paw Portal </h1>
 </header>
 <nav>
 <div id= "nav">
-<a href = "index.html"> Home </a> &nbsp;
+<a href = "/"> Home </a> &nbsp;
 
-<a href = "appointment.html"> Appointments </a> &nbsp;
+<a href = "/appointment"> Appointments </a> &nbsp;
 
-<a href = "account.html"> My Account </a> &nbsp;
+<a href = "/account"> My Account </a> &nbsp;
 
-<a href = "paws.html"> Paws </a> &nbsp;
+<a href = "/paws"> Paws </a> &nbsp;
 
-<a href = "contact us.html"> Contact Us  </a> 
+<a href = "/contact_us"> Contact Us  </a>
 </div>
 </nav>
 
@@ -43,7 +43,7 @@ Landing/login PAGE
  <h2> Customer & Walker Login </h2>
 
 
-<form action="http://webdevbasics.net/scripts/pacific.php” method="post">
+<form action="https://webdevbasics.net/scripts/pacific.php" method="post">
 
 <br >
 
@@ -62,10 +62,10 @@ Landing/login PAGE
 <br> 
 
 <br><br>
-	<button class="button"><a href="account.html">Login</a></button>
+	<button class="button"><a href="/account">Login</a></button>
 	
 
-<p class="link">Don't have an account<br> <a href="signup.html"> Sign up </a> here</a></p>
+<p class="link">Don't have an account<br> <a href="/signup"> Sign up </a> here</p>
 </form>
 		 
 		 
@@ -76,10 +76,10 @@ Landing/login PAGE
 <div id="intro" >
 
 <div id="AccInfo">
-<h2> Welcome to Paw Portal! <h2>
+<h2> Welcome to Paw Portal! </h2>
 
 <h4>We connect busy dog owners with a network of pet lovers in your area who will walk,
- feed, and pet them when you are out of town or busy with work. <h4>
+ feed, and pet them when you are out of town or busy with work. </h4>
  <h2>Our Rates are:</h2>
  <ul>
 <li> Dog Walking: $10/hr  </li>

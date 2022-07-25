@@ -7,39 +7,45 @@ Account PAGE
 <html lang="en">
 <head>
 	<title> My Account </title>
-	<link rel="icon" href="logo.png">
+	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet" type="text/css"  />
-	<link media="print" href="print.css">
+	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
 </head>
-<a name = "top"></a>
+<a id = "top"></a>
 <body>
+<style>
+	img {
+		width: 100%;
+		height: auto;
+	}
+</style>
 <div id="wrapper">
 <header>
-<h1> My Account <h1>
+<h1> My Account </h1>
 </header>
 
 <nav>
 
-<a href = "index.html"> Home </a> &nbsp;
+<a href = "/"> Home </a> &nbsp;
 
-<a href = "appointment.html"> Appointments </a> &nbsp;
+<a href = "/appointment"> Appointments </a> &nbsp;
 
-<a href = "account.html"> My Account </a> &nbsp;
+<a href = "/account"> My Account </a> &nbsp;
 
-<a href = "paws.html"> Paws </a> &nbsp;
+<a href = "/paws"> Paws </a> &nbsp;
 
-<a href = "contact us.html"> Contact Us  </a> 
+<a href = "/contact_us"> Contact Us  </a>
 
 </nav>
 
 <main>
 <div id="links">
 
-<div id="AccInfo">
-<img src="profilePic.jpg" height= "auto" width = "100%" alt="Profile Picture" >
-<a href="#"> Add/Edit Image </a></p>
+<div id="AccInfoImg">
+<img src="../static/images/profilePic.jpg" height= "300" width = "400" alt="Profile Picture" th:src="@{images/profilePic.jpg}">
+<a href="#"> Add/Edit Image </a>
 <p>
 
 </p>
@@ -69,7 +75,7 @@ Note: The Code to my building is 56980
 </p>
 
 </div>
-<a href="#"> Edit Information </a></p>
+<a href="#"> Edit Information </a>
 
 </div>
 
