@@ -1,15 +1,109 @@
+<!--
+SWENG 411 Project
+PawPortal
+Landing/login PAGE
+ -->
 <!DOCTYPE html>
+
 <html lang="en">
+
+
 <head>
-    <meta charset="UTF-8">
-    <title>Special Index Page</title>
+	<title> Paw Portal </title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css"  />
+	<link media="print" href="print.css">
 </head>
+<a name = "top"></a>
 <body>
-<p>Hello from the other side. <br>
-    <a href="/homepage">Home Page</a> <br>
-    <a href="/landing">Landing Page</a> <br>
-    <a href="/contact_us">Contact Page</a> <br>
-    <a href="/register">Register Page</a>
-</p>
+<div id="wrapper">
+<header>
+<h1> Paw Portal <h1>
+</header>
+<nav>
+<div id= "nav">
+<a href = "index.html"> Home </a> &nbsp;
+
+<a href = "appointment.html"> Appointments </a> &nbsp;
+
+<a href = "account.html"> My Account </a> &nbsp;
+
+<a href = "paws.html"> Paws </a> &nbsp;
+
+<a href = "contact us.html"> Contact Us  </a> 
+</div>
+</nav>
+
+<main>
+<div id="links">
+
+<div id="login">
+ <h2> Customer & Walker Login </h2>
+
+
+<form action="http://webdevbasics.net/scripts/pacific.php” method="post">
+
+<br >
+
+<label for="Email">E-mail</label> 
+	<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email">
+<br >
+<br >
+
+<label for="Password"> Password</label> 
+	<input type="text" name="Password" id="Password" required="required" placeholder="Enter your password">
+
+<br>
+<label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+<br> 
+
+<br><br>
+	<button class="button"><a href="account.html">Login</a></button>
+	
+
+<p class="link">Don't have an account<br> <a href="signup.html"> Sign up </a> here</a></p>
+</form>
+		 
+		 
+
+</div>
+</div>
+
+<div id="intro" >
+
+<div id="AccInfo">
+<h2> Welcome to Paw Portal! <h2>
+
+<h4>We connect busy dog owners with a network of pet lovers in your area who will walk,
+ feed, and pet them when you are out of town or busy with work. <h4>
+ <h2>Our Rates are:</h2>
+ <ul>
+<li> Dog Walking: $10/hr  </li>
+<li> Feeding Appointment: $10/meal </li>
+<li> Dog Sitting: $8/hr</li>
+</ul>
+ <br>
+<h5>Login or Sign Up to get started</h5>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
 </body>
+
+<footer>
+
+<br>
+<br>
+Copyright &copy; 2022 Paw Portal, Inc <br>
+<a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
+</footer>
 </html>

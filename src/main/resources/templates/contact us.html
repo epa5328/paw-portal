@@ -1,0 +1,128 @@
+<!--
+SWENG 411 Project
+PawPortal
+Contact US PAGE
+ -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+	<title> Contact Us </title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" type="text/css"  />
+	<link media="print" href="print.css">
+</head>
+<a name = "top"></a>
+<body>
+<style>
+</style>
+<div id="wrapper">
+<header>
+<h1> Contact Us! <h1>
+</header>
+
+<nav>
+
+<a href = "index.html"> Home </a> &nbsp;
+
+<a href = "Appointment.html"> Appointments </a> &nbsp;
+
+<a href = "account.html"> My Account </a> &nbsp;
+
+<a href = "paws.html"> Paws </a> &nbsp;
+
+<a href = "contact us.html"> Contact Us  </a> 
+
+</nav>
+
+<main>
+
+<div id = "intro">
+
+<div id="AccInfo">
+<h2> Ask us how we can help </h2>
+
+<p>
+Please fill out the form to ask us a question about our products and services 
+<br><br>
+Required fields are marked with an asterisk (*). 
+</p>
+
+
+<form action="http://webdevbasics.net/scripts/pacific.php” method="post">
+
+<label for="Name"> *Name:</label> 
+	<input type="text" name="Name" id="Name" required="required" placeholder="Please enter your name">
+<br >
+<br >
+
+<label for="Email">*E-mail:</label> 
+	<input type="email" name="Email" id="Email" required="required" placeholder="Enter an email address.">
+<br >
+<br >
+
+<label for = "Age"> *Age:</label>
+	<input type = "number" name="age" max="99" min="1"  step="1" required="required" placeholder="Select Your Age"/> 
+<br >
+<br >
+
+<label for="Date">Date:</label>  
+	<input type = "date" name = "date" id = "Date" value = ""> 
+<br>
+
+<br> 
+	<input checked="checked" name="newsletter" type="radio" value="question" /> Question? 
+	<input name="newsletter" type="radio" value="comment" /> Comment
+	<input name="newsletter" type="radio" value="other" /> Other
+<br>
+	<textarea cols="40" name="comments" rows="5">Your Question, Comment or Other</textarea>
+
+<br><br>
+
+<label><input name="terms" type="checkbox" value="tandc" required="required"/>Accept terms and Privacy Policy </label> 
+
+<br><br>
+	<input type="submit" value="Submit"  />
+	<input type="reset" value="Reset" style = "background-color:#c63535; color: #ffffff;"/>
+
+</form>
+
+</div>
+
+
+
+
+
+</div>
+
+ <div id="links">
+ 
+
+ <img src = "dog on phone.png" height = "auto" width = "100%" alt = "Contact Us">
+
+</div>
+</main>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+<footer>
+
+<br>
+<br>
+Copyright &copy; 2022 Paw Portal, Inc <br>
+<a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
+</footer>
+</html>
