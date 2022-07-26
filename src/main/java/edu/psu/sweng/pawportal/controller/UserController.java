@@ -15,9 +15,9 @@ public class UserController {
     @Autowired
     public CustomerRepository repo;
 
-    @RequestMapping ( "/home")
+    @RequestMapping ( "/homepage")
     public String homePage(){
-        return "home";
+        return "homepage";
     }
     @RequestMapping ( "/landing")
     public String landingPage(){
