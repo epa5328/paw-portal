@@ -10,17 +10,17 @@ Landing PAGE
 
 <head>
 	<title> Sign Up </title>
-	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
+	<link rel="icon" href="logo.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
-	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
+	<link href="style.css" rel="stylesheet" type="text/css"  />
+	<link media="print" href="print.css">
 </head>
-<a id = "top"></a>
+<a name = "top"></a>
 <body>
 <div id="wrapper">
 <header>
-<h1> Paw Portal </h1>
+<h1> Paw Portal <h1>
 </header>
 
 
@@ -33,20 +33,24 @@ Landing PAGE
 <div id="AccInfo">
 <h2> Signup </h2>
 
-
-<form action="https://webdevbasics.net/scripts/pacific.php" method="post">
+<div id="login">
+<form action="http://webdevbasics.net/scripts/pacific.php” method="post">
 
 <br >
 
-<label for="Email">*E-mail:</label> 
+<label for="Email">*E-mail:</label> <br> 
+
 	<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email address.">
 <br >
 <br >
 
-<label for="PasswordInit"> *Password:</label>
-	<input type="text" name="Password" id="PasswordInit" required="required" placeholder="Please enter your password">
-<label for="PasswordCheck"> *Confirm Password:</label>
-	<input type="text" name="Password" id="PasswordCheck" required="required" placeholder="Please confirm your password">
+<label for="Password"> *Password:</label> <br> 
+
+	<input type="text" name="Password" id="Name" required="required" placeholder="Please enter your password">
+<br>
+<br>
+<label for="Password"> *Confirm Password:</label> 
+	<input type="text" name="Password" id="Name" required="required" placeholder="Please confirm your password">
 <br>
 
 <br> 
@@ -61,7 +65,7 @@ Landing PAGE
 	<input type="reset" value="Reset" style = "background-color:#c63535; color: #ffffff;"/>
 
 </form>
-
+</div>
 
 </div>
 
@@ -70,7 +74,7 @@ Landing PAGE
 
 <div id="links">
 
-<img src="../static/images/dog_with_leash.jpg" style="height:auto;width:auto" height= "183" width = "275" alt = "dog holding leash" th:src="@{images/dog_with_leash.jpg}"/>
+<img src="dog with leash.jpg" height= "auto" width = "auto%" alt = "dog holding leash" />
 
 <h2>  </h2>
 <p>
@@ -78,7 +82,7 @@ Landing PAGE
 <ol>
 
 </ol>
-
+</p>
 
 <h2>  </h2>
 <p>
@@ -86,7 +90,7 @@ Landing PAGE
 <ul>
 
 </ul>
-
+</p>
 
 </div>
 
