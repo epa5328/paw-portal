@@ -7,11 +7,10 @@ Account PAGE
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
 	<title> My Account </title>
-	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
+	<link rel="icon" th:src="@{../images/logo.png}">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
-	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
+	<link th:href="@{../css/style.css}" rel="stylesheet" type="text/css" />
 </head>
 <a id = "top"></a>
 <body>
@@ -44,7 +43,7 @@ Account PAGE
 <div id="links">
 
 <div id="AccInfoImg">
-<img src="../static/images/profilePic.jpg" height= "300" width = "400" alt="Profile Picture" th:src="@{images/profilePic.jpg}">
+<img height= "300" width = "400" alt="Profile Picture" th:src="@{../images/profilePic.jpg}">
 <a href="#"> Add/Edit Image </a>
 <p>
 
