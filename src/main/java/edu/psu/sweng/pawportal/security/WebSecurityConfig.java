@@ -1,14 +1,8 @@
 package edu.psu.sweng.pawportal.security;
 
-import edu.psu.sweng.pawportal.models.Customer;
-import edu.psu.sweng.pawportal.models.CustomerUserDetails;
 import edu.psu.sweng.pawportal.services.CustomerUserDetailsServices;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

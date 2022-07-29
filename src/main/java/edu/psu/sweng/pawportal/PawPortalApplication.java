@@ -1,7 +1,5 @@
 package edu.psu.sweng.pawportal;
 
-
-import edu.psu.sweng.pawportal.controller.UserController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

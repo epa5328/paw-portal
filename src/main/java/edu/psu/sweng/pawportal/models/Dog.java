@@ -1,7 +1,6 @@
 package edu.psu.sweng.pawportal.models;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 
 @Entity
 public class Dog {

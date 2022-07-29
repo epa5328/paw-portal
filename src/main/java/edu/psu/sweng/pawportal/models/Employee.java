@@ -1,7 +1,6 @@
 package edu.psu.sweng.pawportal.models;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 public class Employee{
