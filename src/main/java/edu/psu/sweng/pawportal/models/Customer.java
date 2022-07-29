@@ -115,4 +115,10 @@ public class Customer{
     public void setAddress(String address) {
         this.address = address;
     }
+
+    /*
+    public static Customer getCustomer(Long id) {
+        return customers.stream().filter(c -> id == c.getId()).findFirst().orElse(null);
+    }
+    */
 }
