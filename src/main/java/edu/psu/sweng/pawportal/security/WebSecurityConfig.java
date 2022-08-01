@@ -37,14 +37,8 @@ public class WebSecurityConfig{
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeRequests()
-                .antMatchers("/user_{id}").authenticated()
-                .anyRequest().permitAll()
-                .and().formLogin()
-                .usernameParameter("email")
-                .defaultSuccessUrl("/user_{id}")
-                .permitAll()
-                .and()
-                .logout().logoutSuccessUrl("/homepage").permitAll();
+                .antMatchers("/register","signup").permitAll()
+                .antMatchers("/account/{id}").authenticated().and().formLogin();
         return http.build();
     }
 
