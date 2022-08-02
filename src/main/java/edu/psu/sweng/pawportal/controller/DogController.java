@@ -16,28 +16,28 @@ public class DogController {
     public DogRepository repo;
 
     // show dog
-    @GetMapping("/accounts/{userID}/dogs/{dogID}")
+    @GetMapping("/account/{userID}/dog/{dogID}")
     public String showDog(Dog dog) {
         // SQL query: grab dog info given ID of customer
         return "dogInfoPage";
     }
 
     // create dog
-    @GetMapping("/accounts/{userID}/dogs/new")
+    @GetMapping("/account/{userID}/dog/new")
     public String createDog(Dog dog) {
         // no dog attributes to inject
         return "newDogPage";
     }
     
     // edit dog
-    @GetMapping("/accounts/{userID}/dogs/{dogID}/edit")
+    @GetMapping("/account/{userID}/dog/{dogID}/edit")
     public String editDog(Dog dog) {
         // inject specified dog into HTML
         return "editDogPage";
     }
 
     // update dog (new/edit)
-    @PostMapping("/accounts/{userID}/dogs/{dogID}")
+    @PostMapping("/account/{userID}/dog/{dogID}")
     public String updateDog(Dog dog) {
         // take parameters and save dog
         repo.save(dog);
