@@ -1,16 +1,12 @@
 package edu.psu.sweng.pawportal.controller;
 
-import java.util.HashSet;
-
+//import edu.psu.sweng.pawportal.models.Dog;
+import edu.psu.sweng.pawportal.models.Customer;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import edu.psu.sweng.pawportal.models.*;
 import edu.psu.sweng.pawportal.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Controller
 public class CustomerController {
