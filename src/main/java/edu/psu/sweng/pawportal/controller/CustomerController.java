@@ -43,7 +43,7 @@ public class CustomerController {
     }
     
     // edit customer
-    @GetMapping("/accounts/{userID}/edit")
+    @GetMapping("/account/{userID}/edit")
     public String editCustomer(Customer customer) {
         // inject specified customer into HTML
         return "editCustomerPage";
