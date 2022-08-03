@@ -1,11 +1,11 @@
 <!--
 SWENG 411 Project
 PawPortal
-Sign Up PAGE
+Landing PAGE
  -->
 <!DOCTYPE html>
 
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 
 <head>
@@ -16,59 +16,98 @@ Sign Up PAGE
 	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
 	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
 </head>
-<a id = "top"></a>
+<a name = "top"></a>
 <body>
 <div id="wrapper">
-	<header>
-		<h1> Paw Portal
-			<a href = "/index">
-				<img src="../static/images/logo.png" style="height:7%;width:7%" align = "right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
-			</a>
-		</h1>
-	</header>
+<header>
+<h1> Paw Portal </h1>
+</header>
 
 
 
-	<main>
+<main>
 
 
-		<div id="FullPageIntro" >
+<div id="intro" >
 
-			<div id="AccInfo">
+<div id="AccInfo">
+<h2> Signup </h2>
+
+<div id="login">
+
+	<!--/*@thymesVar id="customer" type="edu.psu.sweng.pawportal.models.Customer"*/-->
+<form action="#" th:action="@{/registration_processed}" th:object="${customer}" method="post">
+
+<div class="form-row">
+	<div class="col-md-6 form-group">
+		<label>*First Name:</label> <br>
+
+		<input type="text" th:field="*{firstName}" class="form-control" placeholder="Enter your First Name.">
+	</div>
+	<div class="col-md-6 form-group">
+		<label>*E-Last Name:</label> <br>
+
+		<input type="text" th:field="*{lastName}" class="form-control" placeholder="Enter your Last Name.">
+	</div>
+	<div class="col-md-6 form-group">
+		<label >*Phone Number:</label> <br>
+
+		<input type="text" th:field="*{phoneNum}" class="form-control" placeholder="Enter your phone number.">
+	</div>
+	<div class="col-md-6 form-group">
+		<label >*E-mail:</label> <br>
+
+		<input type="email" th:field="*{email}" class="form-control" placeholder="Enter your email address.">
+	</div>
+	<div class="col-md-6 form-group">
+		<label>*Address:</label> <br>
+
+		<input type="text" th:field="*{address}" class="form-control" placeholder="Enter your email address.">
+	</div>
+	<div class="col-md-6 form-group">
+		<label > *Password:</label> <br>
+
+		<input type="text" th:field="*{password}" required="required" placeholder="Please enter your password">
+	</div>
+	<div class="col-md-6 form-group">
+		<label > *Confirm Password:</label> <br>
+		<input type="text" name="Password" id="Name" required="required" placeholder="Please confirm your password">
+	</div>
+</div>
+
+<label><input name="terms" type="checkbox" value="tandc" required="required"/>Accept terms and Privacy Policy </label> 
+
+<br><br>
+	<button type="submit" class="btn btn-primary btn-block mt-1">Sign Up</button>
+	<input type="reset" value="Reset" style = "background-color:#c63535; color: #ffffff;"/>
+
+</form>
+</div>
+
+</div>
 
 
-					<div id="signup">
-						<h2> Sign Up </h2>
+</div>
 
-						<form action="test.php" method="post">
+<div id="links">
 
-						<br >
+<img src="dog with leash.jpg" height= "auto" width = "auto%" alt = "dog holding leash" />
 
-						<label for="Email">*E-mail:</label> <br>
+<h2>  </h2>
+<p>
 
-							<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email address."/>
-						<br >
-						<br >
+<ol>
 
-						<label for="Password"> *Password:</label> <br>
+</ol>
+</p>
 
-							<input type="text" name="Password" id="Password" required="required" placeholder="Please enter your password"/>
-						<br>
-						<br>
-						<label for="Password"> *Confirm Password:</label><br>
-							<input type="text" name="Password" id="Confirm Password" required="required" placeholder="Please confirm your password"/>
+<h2>  </h2>
+<p>
 
+<ul>
 
-						<br><br>
-							<button class="subButton">Sign Up</button>
-
-
-
-					</form>
-					</div>
-
-			</div>
-
+</ul>
+</p>
 
 </div>
 
