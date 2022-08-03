@@ -27,6 +27,11 @@ public class UserController {
     public String contactPage(){
         return "contact_us";
     }
+
+    /*
+    This account URL variable may need to be deleted. when the account link is clicked from teh homepage, it should direct
+    the user to the Customer controller pathVariable /account/{id} if authorized.
+     */
     @RequestMapping ( "/account")
     public String accountPage(){
         return "account";
