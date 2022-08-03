@@ -1,7 +1,7 @@
 <!--
 SWENG 411 Project
 PawPortal
-Pet PAGE
+My Paws PAGE
  -->
 <!DOCTYPE html>
 
@@ -18,92 +18,102 @@ Pet PAGE
 </head>
 <a id = "top"></a>
 <body>
-<div id="wrapper">
-<header>
-<h1> My Paws </h1>
-</header>
+	<div id="wrapper">
+		<header>
+		<h1> My Paws
+			<a href = "/index">
+			<img src="../static/images/logo.png" style="height:7%;width:7%"   align="right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
+			</a>
+		</h1>
+		</header>
 
-<nav>
+		<nav>
 
-<a href = "/"> Home </a> &nbsp;
+			<a href = "/home"> Home </a> &nbsp;
 
-<a href = "/appointment"> Appointments </a> &nbsp;
+			<a href = "/appointment"> Appointments </a> &nbsp;
 
-<a href = "/account"> My Account </a> &nbsp;
+			<a href = "/account"> My Account </a> &nbsp;
 
-<a href = "/paws"> Paws </a> &nbsp;
+			<a href = "/paws"> Paws </a> &nbsp;
 
-<a href = "/contact_us"> Contact Us  </a>
+			<a href = "/contact_us"> Contact Us  </a>
 
-</nav>
+		</nav>
 
-<main>
+		<main>
 
-<div id="intro" >
+			<div id="FullPageIntro" >
 
-<div id="AccInfo1">
-<h2>Pet 1 Information: </h2>
-<img src="../static/images/dog.jpg" style="height:30%;width:30%" height= "228" width = "221" alt = "Dogs Profile Picture" th:src="@{images/dog.jpg}"/>
-<p>
-Name: First Last 
-<br><br>
-Customer ID: 3412
-<br><br>
-Breed: 
-<br><br>
-Color: 
-<br><br>
-Weight: 
-<br><br>
-Height: 
-<br><br>
-Note: 
-</p>
-<a href="#"> Edit Information </a>
-</div>
+				<div id="AccInfo">
 
-<div id="AccInfo2">
-<h2>Pet 2 Information: </h2>
-<img src="../static/images/puppy.jpg" style="height:30%;width:30%" height= "183" width = "275" alt = "Dogs Profile Picture" th:src="@{images/puppy.jpg}"/>
-<p>
-Name: First Last 
-<br><br>
-Customer ID: 3412
-<br><br>
-Breed: 
-<br><br>
-Color: 
-<br><br>
-Weight: 
-<br><br>
-Height: 
-<br><br>
-Note: 
-</p>
-<a href="#"> Edit Information </a>
-</div>
+					<div id="AccInfo1">
+
+					<h2>Pet 1 Information: </h2>
+					<img src="../static/images/dog.jpg" style="height:30%;width:30%" height= "228" width = "221" alt = "Dogs Profile Picture" th:src="@{images/dog.jpg}"/>
+						<br><button class="subButton"> Add/Edit Image </button>
+					<p>
+					Name: First Last
+					<br><br>
+					Customer ID: 3412
+						<br><br>
+						Age:
+					<br><br>
+					Breed:
+
+					<br><br>
+					Color:
+					<br><br>
+					Weight:
+					<br><br>
+					Height:
+					<br><br>
+					Note:
+					</p>
+						<button class="subButton"> Edit Information </button>
+
+					</div>
 
 
+					<div id="AccInfo2">
 
+					<h2>Pet 2 Information: </h2>
+					<img src="../static/images/puppy.jpg" style="height:30%;width:30%" height= "183" width = "275" alt = "Dogs Profile Picture" th:src="@{images/puppy.jpg}"/>
+						<br><button class="subButton"> Add/Edit Image </button>
+					<p>
+					Name: First Last
+					<br><br>
+					Customer ID: 3412
+						<br><br>
+						Age:
+					<br><br>
+					Breed:
+					<br><br>
+					Color:
+					<br><br>
+					Weight:
+					<br><br>
+					Height:
+					<br><br>
+					Note:
+					</p>
+						<button class="subButton"> Edit Information </button>
 
+					</div>
 
-</div>
+				</div>
+				<button class="subButton"> Add Dog </button>
+			</div>
 
-<div id="links">
+		</main>
 
-
-
-
-</div>
- 
-
-</main>
-
-</div>
+	</div>
 
 </body>
-<footer>
 
+
+<footer>
+	<a href=#top> Back to top </a> &nbsp;
 <br>
 <br>
 Copyright &copy; 2022 Paw Portal, Inc <br>

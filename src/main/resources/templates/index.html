@@ -18,84 +18,88 @@ Landing/login PAGE
 </head>
 <a id = "top"></a>
 <body>
-<div id="wrapper">
-<header>
-<h1> Paw Portal </h1>
-</header>
-<nav>
-<div id= "nav">
-<a href = "/"> Home </a> &nbsp;
+	<div id="wrapper">
+	<header>
+	<h1> Paw Portal
+		<a href = "/index">
+			<img src="../static/images/logo.png" style="height:7%;width:7%" align = "right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
+		</a>
+	</h1>
+	</header>
+	<nav>
 
-<a href = "/appointment"> Appointments </a> &nbsp;
+		<a href = "/home"> Home </a> &nbsp;
 
-<a href = "/account"> My Account </a> &nbsp;
+		<a href = "/appointment"> Appointments </a> &nbsp;
 
-<a href = "/paws"> Paws </a> &nbsp;
+		<a href = "/account"> My Account </a> &nbsp;
 
-<a href = "/contact_us"> Contact Us  </a>
-</div>
-</nav>
+		<a href = "/paws"> Paws </a> &nbsp;
 
-<main>
-<div id="links">
+		<a href = "/contact_us"> Contact Us  </a>
 
-<div id="login">
- <h2> Customer & Walker Login </h2>
+	</nav>
+
+		<main>
+		<div id="links">
+
+		<div id="login">
+		 <h2> Customer & Walker Login </h2>
 
 
-<form action="https://webdevbasics.net/scripts/pacific.php" method="post">
+		<form action="test.php" method="post">
 
-<br >
+		<br >
 
-<label for="Email">E-mail</label> 
-	<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email">
-<br >
-<br >
+		<label for="Email">E-mail</label>
+			<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email">
+		<br >
+		<br >
 
-<label for="Password"> Password</label> 
-	<input type="text" name="Password" id="Password" required="required" placeholder="Enter your password">
+		<label for="Password"> Password</label>
+			<input type="text" name="Password" id="Password" required="required" placeholder="Enter your password">
 
-<br>
-<label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-<br> 
 
-<br><br>
-	<button class="button"><a href="/account">Login</a></button>
-	
+		<br><br><br>
+			<button class="button">Login</button>
+			<br>
 
-<p class="link">Don't have an account<br> <a href="/signup"> Sign up </a> here</p>
-</form>
-		 
-		 
+			<br>
+		<p class="link">Don't have an account?<br> Sign up today!</p>
+			<br>
+			<button class="button">Sign Up</button>
+		</form>
 
-</div>
-</div>
 
-<div id="intro" >
 
-<div id="AccInfo">
-<h2> Welcome to Paw Portal! </h2>
+		</div>
+		</div>
 
-<h4>We connect busy dog owners with a network of pet lovers in your area who will walk,
- feed, and pet them when you are out of town or busy with work. </h4>
- <h2>Our Rates are:</h2>
- <ul>
-<li> Dog Walking: $10/hr  </li>
-<li> Feeding Appointment: $10/meal </li>
-<li> Dog Sitting: $8/hr</li>
-</ul>
- <br>
-<h5>Login or Sign Up to get started</h5>
+		<div id="intro" >
 
-</div>
+		<div id="AccInfo">
+		<h2> Welcome to Paw Portal! </h2>
 
-</div>
+		<p>We connect busy dog owners with a network of pet lovers in your area who will walk,
+		 feed, and pet them when you are out of town or busy with work. </p>
+		 <h3>Our Rates are:</h3>
+		 <ul>
+		<li> Dog Walking: $10/hr  </li>
+		<li> Feeding Appointment: $10/meal </li>
+		<li> Dog Sitting: $8/hr</li>
+		</ul>
 
-</main>
+		<br>
+		<p><span style="color:#008573;font-weight:bold">Log In</span> or
+			<span style="color:#008573;font-weight:bold">Sign Up</span> to get started</p>
 
-</div>
+		</div>
+
+		</div>
+
+		</main>
+
+	</div>
 
 </body>
 

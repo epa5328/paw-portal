@@ -1,0 +1,100 @@
+<!--
+SWENG 411 Project
+PawPortal
+Landing/login PAGE
+ -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <title> Home </title>
+    <link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+    <link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
+</head>
+<a id = "top"></a>
+<body>
+<div id="wrapper">
+    <header>
+        <h1> Manager: Home
+            <a href = "/index">
+                <img src="../static/images/logo.png" style="height:7%;width:7%"  align = "right" link alt = "Paw Portal Logo" th:src="@{images/puppy.jpg}"/>
+            </a>
+        </h1>
+    </header>
+    <nav>
+
+        <a href = "/empHome"> Home </a> &nbsp;
+
+        <a href = "/Reports"> Reports </a> &nbsp;
+
+        <a href = "/mngAccount"> My Account </a> &nbsp;
+
+        <a href = "/empJobs"> Jobs </a> &nbsp;
+
+
+
+    </nav>
+
+    <main>
+        <div id="links">
+
+        </div>
+
+        <div id="FullPageIntro" >
+
+            <div id="AccInfo">
+
+                <h2>Hi, First Name! </h2>
+
+                <img src="../static/images/profilePic.jpg" style="height:8em;width:10em" align="right" alt="Profile Picture" th:src="@{images/profilePic.jpg}">
+                <p>Employee ID: 3412
+                    <br><br>
+                    Email: your@email.com
+                    <br><br>
+                    Phone Number: (987)123 4567
+                    <br><br>
+
+                </p>
+                <h4>Reports Available: </h4>
+
+                <ul>
+                    <li> Daily Report  </li>
+                    <li> Weekly Report   </li>
+                    <li> Monthly Report  </li>
+                    <li> Report by Walker</li>
+                    <li> Report by Customer </li>
+                </ul>
+                <h4>Jobs At-Risk: </h4>
+
+                <ul>
+                    <li> Walking: Monday   @ 5:00 PM   1hr  </li>
+                    <li> Walking: Tuesday  @ 5:00 PM   1hr   </li>
+                    <li> Walking: Thursday @ 8:00 PM   2hrs  </li>
+                    <li> Feeding: Friday   @ 6:00 PM   1 Meal</li>
+                    <li> Sitting: Sunday   @ 12:00PM   8hrs </li>
+                </ul>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+<footer>
+
+    <br>
+    <br>
+    Copyright &copy; 2022 Paw Portal, Inc <br>
+    <a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
+</footer>
+</html>

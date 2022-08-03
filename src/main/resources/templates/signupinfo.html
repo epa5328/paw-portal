@@ -1,0 +1,128 @@
+<!--
+SWENG 411 Project
+PawPortal
+Signup Info PAGE
+ -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <title> Sign Up Info </title>
+    <link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+    <link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
+</head>
+<a id = "top"></a>
+<body>
+<div id="wrapper">
+    <header>
+        <h1> Paw Portal
+            <a href = "/index">
+                <img src="../static/images/logo.png" style="height:7%;width:7%" align = "right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
+            </a>
+        </h1>
+    </header>
+
+
+
+    <main>
+
+
+        <div id="FullPageIntro" >
+
+            <div id="AccInfo">
+
+
+                <div id="signup">
+                    <br>
+                    <h3> Enter Personal Information: </h3>
+
+                    <p>Required fields are marked with an asterisk (*).</p>
+
+                    <form action="test.php" method="post">
+
+                    <br >
+
+                    <label for="Email">E-mail:</label> <br>
+
+                    <input type="email" name="Email" id="Email" value="newUser@email.com">
+                    <br >
+                    <br >
+                    <label for="FName"> *First Name:</label> <br>
+                    <input type="text" name="name" id="FName" required="required" placeholder="First Name">
+                    <br>
+                    <br>
+                    <label for="LName"> *Last Name:</label> <br>
+                    <input type="text" name="name" id="LName" required="required" placeholder="Last Name">
+                    <br>
+                    <br>
+                    <label for="DoB">*Date of Birth</label><br>
+                    <input type = "date" name = "birthday" id = "DoB" value = "">
+                        <br>
+                        <br>
+                        <label for="PhoneNo"> *Phone Number</label> <br>
+                        <input type="tel" name="phone number" id="PhoneNo" required="required" placeholder="Phone Number">
+                      <br>
+                    <br>
+                        <label for="DogPic"> Add a Profile Picture:</label> <br>
+                        <input type="file" name="DogPic" id="DogPic" required="required" placeholder="Add Dog's Picture">
+                        <br>
+                        <br>
+                        <label for="Address1"> *Street Address</label> <br>
+                        <input type="text" name="address1" id="Address1" required="required" size="70" placeholder="Enter Your Street Address">
+                        <br>
+                        <br>
+                        <label for="Address2"> Address Line 2</label> <br>
+                        <input type="text" name="address2" id="Address2" size="70" required="required" placeholder="Address">
+                        <br>
+                        <br>
+                        <label for="City"> *City</label> <br>
+                        <input type="text" name="city" id="City" required="required" placeholder="City">
+                        <br>
+                        <br>
+                        <label for="State"> *State</label> <br>
+                        <input type="text" name="state" id="State" required="required" placeholder="State">
+                        <br>
+                        <br>
+                        <label for="Zip"> *Zip</label> <br>
+                        <input type="text" name="zip" id="Zip" required="required" placeholder="Zip Code">
+                        <br>
+                        <br>
+                        <label for = "dog_n"> Number of dogs: </label><br>
+                        <input type = "number" name="dog number" id="dog_n" max="99" min="1"  step="1" required="required" placeholder="Select a number"/>
+
+
+
+
+
+                        <br>
+                        <br>
+                        <button class="subButton">Sign Up</button> &nbsp; <button class="resetButton" >Reset </button>
+
+
+
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+</body>
+
+<footer>
+    <br>
+    Copyright &copy; 2022 Paw Portal, Inc <br>
+    <a href = "mailto:tpn5232@psu.edu"> dogwalking@pawportal.com </a>
+</footer>
+</html>

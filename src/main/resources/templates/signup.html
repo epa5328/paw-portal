@@ -1,7 +1,7 @@
 <!--
 SWENG 411 Project
 PawPortal
-Landing PAGE
+Sign Up PAGE
  -->
 <!DOCTYPE html>
 
@@ -16,81 +16,59 @@ Landing PAGE
 	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
 	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
 </head>
-<a name = "top"></a>
+<a id = "top"></a>
 <body>
 <div id="wrapper">
-<header>
-<h1> Paw Portal <h1>
-</header>
+	<header>
+		<h1> Paw Portal
+			<a href = "/index">
+				<img src="../static/images/logo.png" style="height:7%;width:7%" align = "right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
+			</a>
+		</h1>
+	</header>
 
 
 
-<main>
+	<main>
 
 
-<div id="intro" >
+		<div id="FullPageIntro" >
 
-<div id="AccInfo">
-<h2> Signup </h2>
-
-<div id="login">
-<form action="http://webdevbasics.net/scripts/pacific.php” method="post">
-
-<br >
-
-<label for="Email">*E-mail:</label> <br> 
-
-	<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email address.">
-<br >
-<br >
-
-<label for="Password"> *Password:</label> <br> 
-
-	<input type="text" name="Password" id="Name" required="required" placeholder="Please enter your password">
-<br>
-<br>
-<label for="Password"> *Confirm Password:</label> 
-	<input type="text" name="Password" id="Name" required="required" placeholder="Please confirm your password">
-<br>
-
-<br> 
-
-<br>
+			<div id="AccInfo">
 
 
-<label><input name="terms" type="checkbox" value="tandc" required="required"/>Accept terms and Privacy Policy </label> 
+					<div id="signup">
+						<h2> Sign Up </h2>
 
-<br><br>
-	<input type="submit" value="Sign Up"  />
-	<input type="reset" value="Reset" style = "background-color:#c63535; color: #ffffff;"/>
+						<form action="test.php" method="post">
 
-</form>
-</div>
+						<br >
 
-</div>
+						<label for="Email">*E-mail:</label> <br>
+
+							<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email address."/>
+						<br >
+						<br >
+
+						<label for="Password"> *Password:</label> <br>
+
+							<input type="text" name="Password" id="Password" required="required" placeholder="Please enter your password"/>
+						<br>
+						<br>
+						<label for="Password"> *Confirm Password:</label><br>
+							<input type="text" name="Password" id="Confirm Password" required="required" placeholder="Please confirm your password"/>
 
 
-</div>
+						<br><br>
+							<button class="subButton">Sign Up</button>
 
-<div id="links">
 
-<img src="dog with leash.jpg" height= "auto" width = "auto%" alt = "dog holding leash" />
 
-<h2>  </h2>
-<p>
+					</form>
+					</div>
 
-<ol>
+			</div>
 
-</ol>
-</p>
-
-<h2>  </h2>
-<p>
-
-<ul>
-
-</ul>
-</p>
 
 </div>
 

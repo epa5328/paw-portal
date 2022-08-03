@@ -15,78 +15,72 @@ Account PAGE
 </head>
 <a id = "top"></a>
 <body>
-<style>
-	img {
-		width: 100%;
-		height: auto;
-	}
-</style>
-<div id="wrapper">
-<header>
-<h1> My Account </h1>
-</header>
 
-<nav>
+	<div id="wrapper">
+		<header>
+			<h1> My Account
+				<a href = "/index">
+					<img src="../static/images/logo.png" style="height:7%;width:7%"  align = "right" link alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
+				</a>
+			</h1>
+		</header>
 
-<a href = "/"> Home </a> &nbsp;
+		<nav>
 
-<a href = "/appointment"> Appointments </a> &nbsp;
+			<a href = "/"> Home </a> &nbsp;
 
-<a href = "/account"> My Account </a> &nbsp;
+			<a href = "/appointment"> Appointments </a> &nbsp;
 
-<a href = "/paws"> Paws </a> &nbsp;
+			<a href = "/account"> My Account </a> &nbsp;
 
-<a href = "/contact_us"> Contact Us  </a>
+			<a href = "/paws"> Paws </a> &nbsp;
 
-</nav>
+			<a href = "/contact_us"> Contact Us  </a>
 
-<main>
-<div id="links">
+		</nav>
 
-<div id="AccInfoImg">
-<img src="../static/images/profilePic.jpg" height= "300" width = "400" alt="Profile Picture" th:src="@{images/profilePic.jpg}">
-<a href="#"> Add/Edit Image </a>
-<p>
+		<main>
 
-</p>
+			<div id="FullPageIntro" >
 
-</div>
-</div>
+				<div id="AccInfo">
+				<h3>Personal Information </h3>
 
-<div id="intro" >
+					<div id="AccInfoImg">
+						<img src="../static/images/profilePic.jpg" height= "300" width = "400"  alt="Profile Picture" th:src="@{images/profilePic.jpg}">
+						<br><button class="subButton"> Add/Edit Image </button>
 
-<div id="AccInfo">
-<h2>Personal Information: </h2>
+					</div>
 
-<p>
-Name: First Middle Last 
-<br><br>
-Customer ID: 3412
-<br><br>
-Email: your@email.com
-<br><br>
-Address: 1234 Street Road, City, State 09876
-<br><br>
-Phone Number: (987)123 4567
-<br><br>
-Payment Method: Debit Card - ending XX45
-<br><br>
-Note: The Code to my building is 56980
-</p>
-
-</div>
-<a href="#"> Edit Information </a>
-
-</div>
+				<p>
+				Name: First Middle Last
+				<br><br>
+				Customer ID: 3412
+				<br><br>
+				Email: your@email.com
+				<br><br>
+				Address: 1234 Street Road, City, State 09876
+				<br><br>
+				Phone Number: (987)123 4567
+				<br><br>
+				Payment Method: Debit Card - ending XX45
+				<br><br>
+				Note: The Code to my building is 56980
+				</p>
+					<button class="subButton"> Edit Information </button>
+				</div>
 
 
-</main>
+			</div>
 
 
-</div>
+		</main>
+
+
+	</div>
 </body>
 <footer>
-
+	<a href=#top> Back to top </a> &nbsp;
 <br>
 <br>
 Copyright &copy; 2022 Paw Portal, Inc <br>

@@ -17,20 +17,19 @@ Contact US PAGE
 </head>
 <a id = "top"></a>
 <body>
-<style>
-	img {
-		width: 100%;
-		height: auto;
-	}
-</style>
+
 <div id="wrapper">
 	<header>
-		<h1> Contact Us! </h1>
+		<h1> Contact Us
+			<a href = "/index">
+				<img src="../static/images/logo.png" style="height:7%;width:7%"   align="right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
+			</a>
+		</h1>
 	</header>
 
 	<nav>
 
-		<a href = "/"> Home </a> &nbsp;
+		<a href = "/home"> Home </a> &nbsp;
 
 		<a href = "/appointment"> Appointments </a> &nbsp;
 
@@ -44,78 +43,53 @@ Contact US PAGE
 
 	<main>
 
-		<div id = "intro">
-
+		<div id = "FullPageIntro">
 			<div id="AccInfo">
+			<div id="signup">
 				<h2> Ask us how we can help </h2>
 
 				<p>
-					Please fill out the form to ask us a question about our products and services
+					Choose your type of inquiry and enter it in below
 					<br><br>
-					Required fields are marked with an asterisk (*).
 				</p>
 
 
-				<form action="https://webdevbasics.net/scripts/pacific.php" method="post">
+				<form action="test.php" method="post">
 
-					<label for="Name"> *Name:</label>
-					<input type="text" name="Name" id="Name" required="required" placeholder="Please enter your name">
-					<br >
-					<br >
 
-					<label for="Email">*E-mail:</label>
-					<input type="email" name="Email" id="Email" required="required" placeholder="Enter an email address.">
-					<br >
-					<br >
 
-					<label for = "Age"> *Age:</label>
-					<input type = "number" name="age" id="Age" max="99" min="1"  step="1" required="required" placeholder="Select Your Age"/>
-					<br >
-					<br >
+					<label for="qType">Choose the type of inquiry: </label>
+					<select id="qType" name="question type">
+						<option value="Question">Question?</option>
+						<option value="Comment">Comment</option>
+						<option value="Complaint">Complaint</option>
+					</select>
 
-					<label for="Date">Date:</label>
-					<input type = "date" name = "date" id = "Date" value = "">
-					<br>
+					<br >
+					<br >
 
 					<br>
 					<label>
-						<input checked="checked" name="newsletter" type="radio" value="question" />
-					</label> Question?
-					<label>
-						<input name="newsletter" type="radio" value="comment" />
-					</label> Comment
-					<label>
-						<input name="newsletter" type="radio" value="other" />
-					</label> Other
-					<br>
-					<label>
-						<textarea cols="40" name="comments" rows="5">Your Question, Comment or Other</textarea>
+						<textarea cols="40" name="comments" rows="5">Enter your inquiry here</textarea>
 					</label>
 
 					<br><br>
 
-					<label><input name="terms" type="checkbox" value="tandc" required="required"/>Accept terms and Privacy Policy </label>
-
 					<br><br>
-					<input type="submit" value="Submit"  />
-					<input type="reset" value="Reset" style = "background-color:#c63535; color: #ffffff;"/>
+					<button class="subButton">Submit</button>
+
 
 				</form>
 
 			</div>
 
-
+			</div>
 
 
 
 		</div>
 
-		<div id="links">
 
-
-			<img src = "../static/images/dog_on_phone.png" height = "784" width = "1362" alt = "Contact Us" th:src="@{images/dog_on_phone.png}">
-
-		</div>
 	</main>
 
 
