@@ -21,14 +21,14 @@ Landing/login PAGE
 	<div id="wrapper">
 	<header>
 	<h1> Paw Portal
-		<a href = "/index">
+		<a href = "/">
 			<img src="../static/images/logo.png" style="height:7%;width:7%" align = "right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
 		</a>
 	</h1>
 	</header>
 	<nav>
 
-		<a href = "/home"> Home </a> &nbsp;
+		<a href = "/"> Home </a> &nbsp;
 
 		<a href = "/appointment"> Appointments </a> &nbsp;
 
@@ -65,11 +65,11 @@ Landing/login PAGE
 			<br>
 
 			<br>
-		<p class="link">Don't have an account?<br> Sign up today!</p>
-			<br>
-			<button class="button">Sign Up</button>
-		</form>
 
+		</form>
+			<p class="link">Don't have an account?<br> Sign up today!</p>
+			<br>
+			<button onclick="window.location.href='/signup';" class="button">Sign Up</button>
 
 
 		</div>
