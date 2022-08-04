@@ -14,17 +14,21 @@ public class UserController {
     @Autowired
     public CustomerRepository repo;
 
+    @RequestMapping ("/")
+    public String indexPage() {
+        return "index/index";
+    }
     @RequestMapping ("/home")
     public String homePage() {
-        return "index";
+        return "index/index";
     }
     @RequestMapping ("/landing")
     public String landingPage() {
-        return "landing";
+        return "index/landing";
     }
     @RequestMapping ("/contact_us")
     public String contactPage() {
-        return "contact_us";
+        return "index/contact_us";
     }
 
     /*
