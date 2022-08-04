@@ -4,110 +4,80 @@ PawPortal
 Landing/login PAGE
  -->
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
+	<head>
+		<title> Paw Portal </title>
+		<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device, initial-scale=1.0">
+		<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+		<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
+	</head>
+	<a id = "top"></a>
+	<body>
+		<div id="wrapper">
+		<header>
+		<h1> Paw Portal
+			<a href = "/">
+				<img src="../static/images/logo.png" th:src="@{images/logo.png}" alt="Paw Portal Logo" style="height:7%;width:7%" align="right" />
+			</a>
+		</h1>
+		</header>
+		<nav>
+			<a href="/">Home</a>&nbsp;
+			<a href="/appointment">Appointments</a>&nbsp;
+			<a href="/account">My Account</a>&nbsp;
+			<a href="/paws">My Paws</a>&nbsp;
+			<a href="/contact_us">Contact Us</a>&nbsp;
+		</nav>
+			<main>
+				<div id="links">
+					<div id="login">
+						<h2> Customer & Walker Login </h2>
+						<form action="test.php" method="post">
+							<br />
+							<label for="Email">E-mail</label>
+							<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email">
+							<br /><br />
+							<label for="Password"> Password</label>
+							<input type="text" name="Password" id="Password" required="required" placeholder="Enter your password">
+							<br /><br /><br />
+							<button class="button">Log In</button>
+							<br /><br />
+						</form>
+						<p class="link">Don't have an account? Sign up today!</p>
+						<br />
+						<button onclick="window.location.href='/signup';" class="button">Sign Up</button>
+					</div>
+				</div>
 
-
-<head>
-	<title> Paw Portal </title>
-	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
-	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
-</head>
-<a id = "top"></a>
-<body>
-	<div id="wrapper">
-	<header>
-	<h1> Paw Portal
-		<a href = "/">
-			<img src="../static/images/logo.png" style="height:7%;width:7%" align = "right" alt = "Paw Portal Logo" th:src="@{images/logo.png}"/>
-		</a>
-	</h1>
-	</header>
-	<nav>
-
-		<a href = "/"> Home </a> &nbsp;
-
-		<a href = "/appointment"> Appointments </a> &nbsp;
-
-		<a href = "/account"> My Account </a> &nbsp;
-
-		<a href = "/paws"> Paws </a> &nbsp;
-
-		<a href = "/contact_us"> Contact Us  </a>
-
-	</nav>
-
-		<main>
-		<div id="links">
-
-		<div id="login">
-		 <h2> Customer & Walker Login </h2>
-
-
-		<form action="test.php" method="post">
-
-		<br >
-
-		<label for="Email">E-mail</label>
-			<input type="email" name="Email" id="Email" required="required" placeholder="Enter your email">
-		<br >
-		<br >
-
-		<label for="Password"> Password</label>
-			<input type="text" name="Password" id="Password" required="required" placeholder="Enter your password">
-
-
-		<br><br><br>
-			<button class="button">Login</button>
-			<br>
-
-			<br>
-
-		</form>
-			<p class="link">Don't have an account?<br> Sign up today!</p>
-			<br>
-			<button onclick="window.location.href='/signup';" class="button">Sign Up</button>
-
-
+				<div id="intro">
+					<div id="AccInfo">
+					<h2>Welcome to Paw Portal!</h2>
+					<p>We connect busy dog owners with a network of pet lovers in your area who will walk, feed, and pet them when you are out of town or busy with work.</p>
+					<h3>Our Rates:</h3>
+					<ul>
+						<li> Walking: $10/hr</li>
+						<li> Sitting: $8/hr</li>
+						<li> Feeding: $10/meal</li>
+					</ul>
+					
+					<p>
+						<span style="color:#008573;font-weight:bold">Log In</span>
+						or
+						<span style="color:#008573;font-weight:bold">Sign Up</span>
+						to get started!
+					</p>
+					</div>
+				</div>
+			</main>
 		</div>
-		</div>
+	</body>
 
-		<div id="intro" >
-
-		<div id="AccInfo">
-		<h2> Welcome to Paw Portal! </h2>
-
-		<p>We connect busy dog owners with a network of pet lovers in your area who will walk,
-		 feed, and pet them when you are out of town or busy with work. </p>
-		 <h3>Our Rates are:</h3>
-		 <ul>
-		<li> Dog Walking: $10/hr  </li>
-		<li> Feeding Appointment: $10/meal </li>
-		<li> Dog Sitting: $8/hr</li>
-		</ul>
-
-		<br>
-		<p><span style="color:#008573;font-weight:bold">Log In</span> or
-			<span style="color:#008573;font-weight:bold">Sign Up</span> to get started</p>
-
-		</div>
-
-		</div>
-
-		</main>
-
-	</div>
-
-</body>
-
-<footer>
-
-<br>
-<br>
-Copyright &copy; 2022 Paw Portal, Inc <br>
-<a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
-</footer>
+	<footer>
+		<br /><br />
+		Copyright &copy; 2022 Paw Portal, Inc.
+		<br />
+		<a href="mailto:portalpaw532@gmail.com">dogwalking@pawportal.com</a>
+	</footer>
 </html>

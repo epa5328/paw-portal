@@ -5,7 +5,6 @@ import edu.psu.sweng.pawportal.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -15,16 +14,16 @@ public class UserController {
     @Autowired
     public CustomerRepository repo;
 
-    @RequestMapping ( "/homepage")
-    public String homePage(){
-        return "homepage";
+    @RequestMapping ("/home")
+    public String homePage() {
+        return "index";
     }
-    @RequestMapping ( "/landing")
-    public String landingPage(){
+    @RequestMapping ("/landing")
+    public String landingPage() {
         return "landing";
     }
-    @RequestMapping ( "/contact_us")
-    public String contactPage(){
+    @RequestMapping ("/contact_us")
+    public String contactPage() {
         return "contact_us";
     }
 
