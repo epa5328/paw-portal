@@ -1,0 +1,86 @@
+<!--
+SWENG 411 Project
+PawPortal
+Account PAGE
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Walker Account </title>
+  <link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device, initial-scale=1.0">
+  <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
+  <link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
+</head>
+<a id = "top"></a>
+<body>
+
+<div id="wrapper">
+  <header>
+    <h1> Walker Account
+      <a href = "/index">
+        <img src="../static/images/logo.png" style="height:7%;width:7%"  align = "right" link alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
+      </a>
+    </h1>
+  </header>
+
+  <nav>
+
+    <a href = "/empHome"> Home </a> &nbsp;
+
+    <a href = "/Reports"> Reports </a> &nbsp;
+
+    <a href = "/mngAccount"> My Account </a> &nbsp;
+
+    <a href = "/Jobs"> Jobs </a> &nbsp;
+
+  </nav>
+
+  <main>
+
+    <div id="FullPageIntro" >
+
+      <div id="AccInfo">
+        <h3>Personal Information </h3>
+
+        <div id="AccInfoImg">
+          <img src="../static/images/profilePic.jpg" height= "300" width = "400"  alt="Profile Picture" th:src="@{images/profilePic.jpg}">
+          <br><button class="subButton"> Add/Edit Image </button>
+
+        </div>
+
+        <p>
+          Name: First Middle Last
+          <br><br>
+          Customer ID: 3412
+          <br><br>
+          Email: your@email.com
+          <br><br>
+          Address: 1234 Street Road, City, State 09876
+          <br><br>
+          Phone Number: (987)123 4567
+          <br><br>
+          Payment Method: Direct Deposit - ending XX45
+
+        </p>
+        <button class="subButton"> Edit Information </button>
+      </div>
+
+
+    </div>
+
+
+  </main>
+
+
+</div>
+</body>
+<footer>
+  <a href=#top> Back to top </a> &nbsp;
+  <br>
+  <br>
+  Copyright &copy; 2022 Paw Portal, Inc <br>
+  <a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
+</footer>
+</html>
