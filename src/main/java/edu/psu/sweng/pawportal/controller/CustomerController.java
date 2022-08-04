@@ -58,5 +58,3 @@ public class CustomerController {
         return "customerInfoPage";
     }
 }
-
-// hi it's me
