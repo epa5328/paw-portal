@@ -13,10 +13,6 @@ public class IndexController {
     public String homePage() {
         return "index/index";
     }
-    @RequestMapping ("/landing")
-    public String landingPage() {
-        return "index/landing";
-    }
     @RequestMapping ("/contact_us")
     public String contactPage() {
         return "index/contact_us";
