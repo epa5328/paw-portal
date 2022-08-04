@@ -14,23 +14,6 @@ public class UserController {
     @Autowired
     public CustomerRepository repo;
 
-    @RequestMapping ("/")
-    public String indexPage() {
-        return "index/index";
-    }
-    @RequestMapping ("/home")
-    public String homePage() {
-        return "index/index";
-    }
-    @RequestMapping ("/landing")
-    public String landingPage() {
-        return "index/landing";
-    }
-    @RequestMapping ("/contact_us")
-    public String contactPage() {
-        return "index/contact_us";
-    }
-
     /*
     These account URL variable may need to be deleted. when the account link is clicked from the homepage, it should direct
     the user to the Customer controller pathVariable /account/{id} if authorized.
