@@ -35,6 +35,8 @@ nav a:link {color:#008573;}
 nav a:visited {color:#8c8c8c;}
 nav a:hover{ color:#c63535;}
 
+header a:link, header a:visited, header a:hover {color:#008573;}
+
 #intro {
     font-size: 1.2em;
     float: left;
