@@ -4,31 +4,12 @@ PawPortal
 Signup Info PAGE
  -->
 <!DOCTYPE html>
-
-<html lang="en">
-
-
-<head>
-    <title> Sign Up Info </title>
-    <link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device, initial-scale=1.0">
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
-    <link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
-</head>
-<a id = "top"></a>
-<body>
-<div id="wrapper">
-    <header>
-        <h1> Paw Portal
-            <a href = "/index">
-                <img src="../static/images/logo.png" style="height:7%;width:7%" align = "right" alt = "Paw Portal Logo" th:src="@{images/logo.jpg}"/>
-            </a>
-        </h1>
-    </header>
-
-
-
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head th:replace="partials/head :: head(title='Sign Up')"></head>
+	<a id = "top"></a>
+	<body>
+		<div id="wrapper">
+		<div th:replace="partials/header :: header(title='Sign Up')"></div>
     <main>
 
 
@@ -117,12 +98,6 @@ Signup Info PAGE
     </main>
 
 </div>
-
+<div th:replace="partials/footer :: footer"></div>
 </body>
-
-<footer>
-    <br>
-    Copyright &copy; 2022 Paw Portal, Inc <br>
-    <a href = "mailto:tpn5232@psu.edu"> dogwalking@pawportal.com </a>
-</footer>
 </html>

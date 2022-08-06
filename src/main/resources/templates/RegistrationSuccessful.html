@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registration Message Page</title>
-</head>
-<body>
-You are now registered! <a href = "/"> Home </a> &nbsp;
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head th:replace="partials/head :: head(title='Registration Successful')"></head>
+	<a id = "top"></a>
+	<body>
+		<div id="wrapper">
+		<div th:replace="partials/header :: header(title='Registration Successful')"></div>
+<main>
+    You are now registered! <a href = "/"> Home </a> &nbsp;
+</main>
+</div>
+<div th:replace="partials/footer :: footer"></div>
 </body>
 </html>

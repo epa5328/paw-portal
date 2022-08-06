@@ -4,27 +4,12 @@ PawPortal
 Landing PAGE
  -->
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-
-
-<head>
-	<title> Sign Up </title>
-	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
-	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
-</head>
-<a id = "top"></a>
-<body>
-<div id="wrapper">
-<header>
-<h1> Paw Portal </h1>
-</header>
-
-
-
+    <head th:replace="partials/head :: head(title='Sign Up')"></head>
+	<a id = "top"></a>
+	<body>
+		<div id="wrapper">
+		<div th:replace="partials/header :: header(title='Sign Up')"></div>
 <main>
 
 
@@ -115,12 +100,6 @@ Landing PAGE
 </main>
 
 </div>
-
+<div th:replace="partials/footer :: footer"></div>
 </body>
-
-<footer>
-<br>
-Copyright &copy; 2022 Paw Portal, Inc <br>
-<a href = "mailto:tpn5232@psu.edu"> dogwalking@pawportal.com </a>
-</footer>
 </html>

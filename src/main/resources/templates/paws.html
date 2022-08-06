@@ -6,41 +6,11 @@ My Paws PAGE
 <!DOCTYPE html>
 
 <html lang="en">
-
-
-<head>
-	<title> My Paws </title>
-	<link rel="icon" href="../static/images/logo.png" th:src="@{images/logo.png}">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{css/style.css}" />
-	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
-</head>
-<a id = "top"></a>
-<body>
-	<div id="wrapper">
-		<header>
-		<h1> My Paws
-			<a href = "/index">
-			<img src="../static/images/logo.png" th:src="@{images/logo.png}" style="height:7%;width:7%"   align="right" alt = "Paw Portal Logo" />
-			</a>
-		</h1>
-		</header>
-
-		<nav>
-
-			<a href = "/home"> Home </a> &nbsp;
-
-			<a href = "/appointment"> Appointments </a> &nbsp;
-
-			<a href = "/account"> My Account </a> &nbsp;
-
-			<a href = "/paws"> Paws </a> &nbsp;
-
-			<a href = "/contact_us"> Contact Us  </a>
-
-		</nav>
-
+	<head th:replace="partials/head :: head(title='My Paws')"></head>
+	<a id = "top"></a>
+	<body>
+		<div id="wrapper">
+		<div th:replace="partials/header :: header(title='My Paws')"></div>
 		<main>
 
 			<div id="FullPageIntro" >
@@ -108,15 +78,6 @@ My Paws PAGE
 		</main>
 
 	</div>
-
+	<div th:replace="partials/footer :: footer"></div>
 </body>
-
-
-<footer>
-	<a href=#top> Back to top </a> &nbsp;
-<br>
-<br>
-Copyright &copy; 2022 Paw Portal, Inc <br>
-<a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
-</footer>
 </html>

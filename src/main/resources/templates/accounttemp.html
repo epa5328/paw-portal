@@ -5,41 +5,11 @@ Account PAGE
  -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head>
-	<title> My Account </title>
-	<link rel="icon" href="../static/images/logo.png" th:src="@{../images/logo.png}">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device, initial-scale=1.0">
-	<link th:href="@{../css/style.css}" rel="stylesheet" type="text/css" href="../static/css/style.css"/>
-	<link media="print" href="../static/css/print.css" th:href="@{css/print.css}">
-</head>
-<a id = "top"></a>
-<body>
-<style>
-	img {
-		width: 100%;
-		height: auto;
-	}
-</style>
-<div id="wrapper">
-<header>
-<h1> My Account </h1>
-</header>
-
-<nav>
-
-<a href = "/"> Home </a> &nbsp;
-
-<a href = "/appointment"> Appointments </a> &nbsp;
-
-<a href = "/account"> My Account </a> &nbsp;
-
-<a href = "/paws"> Paws </a> &nbsp;
-
-<a href = "/contact_us"> Contact Us  </a>
-
-</nav>
-
+	<head th:replace="partials/head :: head(title='My Account')"></head>
+	<a id = "top"></a>
+	<body>
+		<div id="wrapper">
+		<div th:replace="partials/header :: header(title='My Account')"></div>
 <main>
 <div id="links">
 
@@ -84,12 +54,6 @@ Note: The Code to my building is 56980
 
 
 </div>
+<div th:replace="partials/footer :: footer"></div>
 </body>
-<footer>
-
-<br>
-<br>
-Copyright &copy; 2022 Paw Portal, Inc <br>
-<a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
-</footer>
 </html>
