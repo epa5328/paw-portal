@@ -5,31 +5,11 @@ Contact US PAGE
  -->
  <!DOCTYPE html>
  <html xmlns:th="http://www.thymeleaf.org" lang="en">
-	 <head>
-		 <title> Paw Portal </title>
-		 <link th:src="@{images/logo.png}" rel="icon" />
-		 <meta charset="utf-8">
-		 <meta name="viewport" content="width=device, initial-scale=1.0">
-		 <link th:href="@{css/style.css}" rel="stylesheet" type="text/css" />
-		 <link th:href="@{css/print.css}" rel="stylesheet" type="text/css" media="print" />
-	 </head>
-	 <a id = "top"></a>
-	 <body>
-		 <div id="wrapper">
-		 <header>
-		 <h1> Paw Portal
-			 <a href = "/">
-				 <img th:src="@{images/logo.png}" alt="Paw Portal Logo" style="height:7%;width:7%" align="right" />
-			 </a>
-		 </h1>
-		 </header>
-		 <nav>
-			 <a href="/">Home</a>&nbsp;
-			 <a href="/appointment">Appointments</a>&nbsp;
-			 <a href="/account">My Account</a>&nbsp;
-			 <a href="/paws">My Paws</a>&nbsp;
-			 <a href="/contact_us">Contact Us</a>&nbsp;
-		 </nav>
+	<head th:replace="partials/head :: head(title='Contact Us')"></head>
+	<a id = "top"></a>
+	<body>
+		<div id="wrapper">
+		<div th:replace="partials/header :: header(title='Contact Us')"></div>
 
 	<main>
 
@@ -86,19 +66,6 @@ Contact US PAGE
 
 
 </div>
-
-
-
-
-
-
-
+<div th:replace="partials/footer :: footer"></div>
 </body>
-<footer>
-
-	<br>
-	<br>
-	Copyright &copy; 2022 Paw Portal, Inc <br>
-	<a href = "mailto:portalpaw532@gmail.com"> dogwalking@pawportal.com </a>
-</footer>
 </html>
