@@ -4,51 +4,42 @@ PawPortal
 Account PAGE
  -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 	<head th:replace="partials/head :: head(title='My Account')"></head>
-	<a id = "top"></a>
+	<a id="top"></a>
 	<body>
 		<div id="wrapper">
-		<div th:replace="partials/header :: header(title='My Account')"></div>
-		<main>
-
-			<div id="FullPageIntro" >
-
-				<div id="AccInfo">
-				<h3>Personal Information </h3>
-
-					<div id="AccInfoImg">
-						<img src="../static/images/profilePic.jpg" height= "300" width = "400"  alt="Profile Picture" th:src="@{images/profilePic.jpg}">
-						<br><button class="subButton"> Add/Edit Image </button>
-
-					</div>
-
-				<p>
-				Name: First Middle Last
-				<br><br>
-				Customer ID: 3412
-				<br><br>
-				Email: your@email.com
-				<br><br>
-				Address: 1234 Street Road, City, State 09876
-				<br><br>
-				Phone Number: (987)123 4567
-				<br><br>
-				Payment Method: Debit Card - ending XX45
-				<br><br>
-				Note: The Code to my building is 56980
-				</p>
-					<button class="subButton"> Edit Information </button>
+			<div th:replace="partials/header :: header(title='My Account')"></div>
+			<main>
+			<div id="links">
+				<div id="AccInfoImg">
+					<img src="../../static/images/profilePic.jpg" height= "300" width = "400" alt="Profile Picture" th:src="@{/images/profilePic.jpg}">
+					<button class="subButton" href="#">Add/Edit Image</button>
 				</div>
-
-
 			</div>
-
-
-		</main>
-
-
-	</div>
-	<div th:replace="partials/footer :: footer"></div>
-</body>
+			<div id="intro" >
+				<div id="AccInfo">
+					<h2>Personal Information:</h2>
+					<p>
+						Name: <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
+						<br><br>
+						Customer ID: <span th:text="${customer.id}"></span>
+						<br><br>
+						Email: <span th:text="${customer.email}"></span>
+						<br><br>
+						Address: <span th:text="${customer.address}"></span>
+						<br><br>
+						Phone Number: <span th:text="${customer.phoneNum}"></span>
+						<br><br>
+						Payment Method: Debit Card - ending XX45
+						<br><br>
+						Note: The Code to my building is 56980
+					</p>
+					</div>
+					<button class="subButton" href="#">Edit Information</button>
+				</div>
+			</main>
+		</div>
+		<div th:replace="partials/footer :: footer"></div>
+	</body>
 </html>

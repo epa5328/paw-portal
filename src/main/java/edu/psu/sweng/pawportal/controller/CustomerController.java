@@ -14,11 +14,18 @@ public class CustomerController {
     @Autowired
     public CustomerRepository repo;
 
+    // no customer
+    @GetMapping("/account")
+    public String noCustomer() {
+        return "redirect:/";
+    }
+
+
     // show customer
     @GetMapping("/account/{userID}")
     public String showCustomer(Model model, @PathVariable("userID") long userID) {
         model.addAttribute("customer", repo.findById(userID));
-        return "accounttemp";
+        return "account";
     }
 
     // create customer
