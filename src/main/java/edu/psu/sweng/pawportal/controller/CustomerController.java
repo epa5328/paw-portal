@@ -20,7 +20,6 @@ public class CustomerController {
         return "redirect:/";
     }
 
-
     // show customer
     @GetMapping("/account/{userID}")
     public String showCustomer(Model model, @PathVariable("userID") long userID) {
@@ -37,8 +36,8 @@ public class CustomerController {
     
     // edit customer
     @GetMapping("/account/{userID}/edit")
-    public String editCustomer(Customer customer) {
-        // inject specified customer into HTML
+    public String editCustomer(Model model, @PathVariable("userID") long userID) {
+        model.addAttribute("customer", repo.findById(userID));
         return "editCustomerPage";
     }
 
