@@ -43,10 +43,9 @@ public class CustomerController {
 
     // update customer (new/edit)
     @PostMapping("/account/{userID}")
-    public String updateCustomer(Customer customer) {
-        // take parameters and save customer
-        repo.save(customer);
-        // SQL query: grab customer info given ID
-        return "customerInfoPage";
+    public String updateCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
+        repo.save(customer); // save incoming customer
+        model.addAttribute("customer", repo.findById(userID));
+        return "account";
     }
 }
