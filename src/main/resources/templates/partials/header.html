@@ -1,16 +1,16 @@
 <div th:fragment="header">
     <header>
-      <a href = "/"><h1 th:text="${title}"></a>
-			<a href = "/">
+      <a href="/"><h1 th:text="${title}"></a>
+			<a href="/">
 				<img th:src="@{/images/logo.png}" alt="Paw Portal Logo" style="height:7%;width:7%" align="right" />
 			</a>
 		</h1>
     </header>
     <nav>
-        <a href="/">Home</a>&nbsp;
-        <a href="/appointment">Appointments</a>&nbsp;
-        <a href="/account/1">My Account</a>&nbsp;
-        <a href="/paws">My Paws</a>&nbsp;
-        <a href="/contact_us">Contact Us</a>&nbsp;
+        <a th:href="@{/}">Home</a>&nbsp;
+        <a th:href="@{/account/1}">My Account</a>&nbsp;
+        <a th:href="@{/customer/paws}">My Paws</a>&nbsp;
+        <a th:href="@{/customer/appointment}">Appointments</a>&nbsp;
+        <a th:href="@{/contact_us}">Contact Us</a>&nbsp;
     </nav>
 </div>

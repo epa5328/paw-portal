@@ -19,12 +19,23 @@ public class CustomerController {
     public String noCustomer() {
         return "redirect:/";
     }
+    // some customer
+    @GetMapping("/customer")
+    public String someCustomer() {
+        return noCustomer();
+    }
+
+    // customer stuff
+    @GetMapping("/customer/{page}")
+    public String customerStuff(@PathVariable("page") String page) {
+        return "customer/" + page;
+    } 
 
     // show customer
     @GetMapping("/account/{userID}")
     public String showCustomer(Model model, @PathVariable("userID") long userID) {
         model.addAttribute("customer", repo.findById(userID));
-        return "account";
+        return "customer/account";
     }
 
     // create customer
@@ -46,6 +57,6 @@ public class CustomerController {
     public String updateCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
         repo.save(customer); // save incoming customer
         model.addAttribute("customer", repo.findById(userID));
-        return "account";
+        return "customer/account";
     }
 }
