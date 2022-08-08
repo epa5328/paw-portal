@@ -49,7 +49,7 @@ public class CustomerController {
     @GetMapping("/account/{userID}/edit")
     public String editCustomer(Model model, @PathVariable("userID") long userID) {
         model.addAttribute("customer", repo.findById(userID));
-        return "editCustomerPage";
+        return "customer/editcust";
     }
 
     // update customer (new/edit)
