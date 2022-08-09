@@ -52,4 +52,17 @@ public class CustomerUserDetails implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
+
+    private static long loggedIn = 0;
+
+    // returns 0 unless
+    public static long getLoggedIn() {
+        return loggedIn;
+    }
+    // changes from 0
+    public static void setLoggedIn(long custID) {
+        loggedIn = custID;
+    }
 }

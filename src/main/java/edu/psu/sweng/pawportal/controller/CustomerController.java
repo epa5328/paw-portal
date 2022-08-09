@@ -2,6 +2,8 @@ package edu.psu.sweng.pawportal.controller;
 
 import org.springframework.ui.Model;
 import edu.psu.sweng.pawportal.models.Customer;
+import edu.psu.sweng.pawportal.models.CustomerUserDetails;
+
 import org.springframework.stereotype.Controller;
 import edu.psu.sweng.pawportal.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,9 @@ public class CustomerController {
     // show customer
     @GetMapping("/account/{userID}")
     public String showCustomer(Model model, @PathVariable("userID") long userID) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
         model.addAttribute("customer", repo.findById(userID));
         return "customer/account";
     }
@@ -48,6 +53,9 @@ public class CustomerController {
     // edit customer
     @GetMapping("/account/{userID}/edit")
     public String editCustomer(Model model, @PathVariable("userID") long userID) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
         model.addAttribute("customer", repo.findById(userID));
         return "customer/editcust";
     }
@@ -55,6 +63,9 @@ public class CustomerController {
     // update customer (new/edit)
     @PostMapping("/account/{userID}")
     public String updateCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
+        if (CustomerUserDetails.getLoggedIn() == 0) {
+            return "redirect:/";
+        }
         repo.findById(userID).propagateChanges(customer); // copy in fields
         repo.save(repo.findById(userID)); // save the changes
         model.addAttribute("customer", repo.findById(userID));

@@ -1,6 +1,7 @@
 package edu.psu.sweng.pawportal.controller;
 
 import edu.psu.sweng.pawportal.models.Customer;
+import edu.psu.sweng.pawportal.models.CustomerUserDetails;
 import edu.psu.sweng.pawportal.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -47,7 +48,8 @@ public class UserController {
         String encodedPassword = encoder.encode(customer.getPassword());
         customer.setPassword(encodedPassword);
         repo.save(customer);
-        return "RegistrationSuccessful";
+        CustomerUserDetails.setLoggedIn(customer.getId());
+        return "customer/RegistrationSuccessful";
     }
     /*
     @PostMapping("/login") // method is written in pseudocode style; modify into proper Java code later
