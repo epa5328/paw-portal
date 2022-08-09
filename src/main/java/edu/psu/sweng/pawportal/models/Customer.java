@@ -35,6 +35,26 @@ public class Customer{
     @Column(nullable = false, length = 64)
     private String password;
 
+    private boolean active;
+
+    private String roles;
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
     @OneToMany
     private Set<Dog> dogs;
     public String getPassword() {
