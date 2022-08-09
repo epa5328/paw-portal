@@ -71,6 +71,38 @@ public class CustomerUserDetails implements UserDetails {
     }
 
 
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getlastName() {
+        return lastName;
+    }
+    public void setlastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public List<GrantedAuthority> useAuthorities() {
+        return authorities;
+    }
+
 
     private static long loggedIn = 0;
 
