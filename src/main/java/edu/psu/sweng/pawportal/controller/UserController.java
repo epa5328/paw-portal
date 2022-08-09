@@ -51,6 +51,21 @@ public class UserController {
         CustomerUserDetails.setLoggedIn(customer.getId());
         return "customer/RegistrationSuccessful";
     }
+
+    @PostMapping("/login")
+    public String processLogin(Customer customer) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String encodedPassword = encoder.encode(customer.getPassword());
+        Customer accountCust = repo.findByEmail(customer.getEmail());
+        System.out.println(encodedPassword);
+        System.out.println(accountCust.getPassword());
+        if (encodedPassword.equals(accountCust.getPassword())) {
+            CustomerUserDetails.setLoggedIn(accountCust.getId());
+            return "redirect:/account/" + accountCust.getId();
+        }
+        return "redirect:/"; // FAIL!
+    }
+
     /*
     @PostMapping("/login") // method is written in pseudocode style; modify into proper Java code later
     public String GetEmail(User user) {
@@ -62,5 +77,5 @@ public class UserController {
         }
         return "redirect: /emailNotExist";
     }
-     */
+    */
 }
