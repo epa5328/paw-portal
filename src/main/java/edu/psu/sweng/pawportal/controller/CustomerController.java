@@ -55,7 +55,8 @@ public class CustomerController {
     // update customer (new/edit)
     @PostMapping("/account/{userID}")
     public String updateCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
-        repo.save(customer); // save incoming customer
+        repo.findById(userID).propagateChanges(customer); // copy in fields
+        repo.save(repo.findById(userID)); // save the changes
         model.addAttribute("customer", repo.findById(userID));
         return "customer/account";
     }

@@ -123,4 +123,12 @@ public class Customer{
         return customers.stream().filter(c -> id == c.getId()).findFirst().orElse(null);
     }
     */
+
+    public void propagateChanges(Customer c) {
+        this.firstName = c.firstName;
+        this.lastName = c.lastName;
+        this.phoneNum = c.phoneNum;
+        this.email = c.email;
+        this.address = c.address;
+    }
 }
