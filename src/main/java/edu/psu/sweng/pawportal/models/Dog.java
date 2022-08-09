@@ -6,11 +6,10 @@ import javax.persistence.*;
 public class Dog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
 
     protected String name;
-    @ManyToOne
-    private Customer owner;
+    private long ownerId;
     private String breed;
     private int size; //in inches
     private double weight; //in pounds
@@ -21,9 +20,9 @@ public class Dog {
     public Dog() {
     }
 
-    public Dog(String name, Customer owner, String breed, int size, double weight, String color, int temperament, String notes) {
+    public Dog(String name, long ownerId, String breed, int size, double weight, String color, int temperament, String notes) {
         this.name = name;
-        this.owner = owner;
+        this.ownerId = ownerId;
         this.breed = breed;
         this.size = size;
         this.weight = weight;
@@ -32,12 +31,20 @@ public class Dog {
         this.notes = notes;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public long getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(long ownerId) {
+        this.ownerId = ownerId;
     }
 
     public String getName() {

@@ -21,7 +21,6 @@ public class CustomerUserDetails implements UserDetails {
     private String email;
     private String address;
     private String password;
-    private boolean active;
     private List<GrantedAuthority> authorities;
 
     public CustomerUserDetails(Customer customer) {

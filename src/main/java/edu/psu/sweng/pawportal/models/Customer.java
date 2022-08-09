@@ -19,8 +19,6 @@ public class Customer{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-
-
     @Column(nullable = false, length = 64)
     private String firstName;
     @Column(nullable = false, length = 64)
@@ -36,8 +34,6 @@ public class Customer{
     private String password;
 
     private String roles;
-
-
 
 
     public String getRoles() {
@@ -63,30 +59,21 @@ public class Customer{
     public Customer() {
     }
 
-    public Customer(String firstName, String lastName, String phoneNum, String email, String address, String password, Set<Dog> dogs) {
+    public Customer(String firstName, String lastName, String phoneNum, String email, String address, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNum = phoneNum;
         this.email = email;
         this.address = address;
         this.password = password;
-        this.dogs = dogs;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
-    }
-
-    public Set<Dog> getDogs() {
-        return dogs;
-    }
-
-    public void setDogs(Set<Dog> dogs) {
-        this.dogs = dogs;
     }
 
     public String getFirstName() {
