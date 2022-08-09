@@ -1,66 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 	<head th:replace="partials/head :: head(title='Edit Account')"></head>
 	<a id="top"></a>
 	<body>
 		<div id="wrapper">
 			<div th:replace="partials/header :: header(title='Edit Account')"></div>
 			<main>
-			<div id="links">
-				<div id="AccInfoImg">
-					<img src="../../static/images/profilePic.jpg" height= "300" width = "400" alt="Profile Picture" th:src="@{/images/profilePic.jpg}">
-					<button class="subButton" href="#">Add/Edit Image</button>
+				<div id="links">
+					<div id="AccInfoImg">
+						<img src="../../static/images/profilePic.jpg" height="300" width="400" alt="Profile Picture" th:src="@{/images/profilePic.jpg}">
+						<button class="subButton" href="#">Add/Edit Image</button>
+					</div>
 				</div>
-			</div>
-			<div id="intro" >
-				<div id="AccInfo">
-					<h2>Personal Information:</h2>
-					<form action="#" th:action="@{'/account/' + ${customer.id}}" th:object="${customer}" method="post">
-
-						<div class="form-row">
-							<div class="col-md-6 form-group">
-								<label>First Name:</label> <br>
-						
-								<input type="text" th:field="*{firstName}" required="required" class="form-control" th:value="${customer.firstName}">
+				<div id="intro">
+					<div id="AccInfo">
+						<h2>Personal Information:</h2>
+						<form action="#" th:action="@{'/account/' + ${customer.id}}" th:object="${customer}" method="post">
+							<div class="form-row">
+								<div class="col-md-6 form-group">
+									<label>First Name:</label><br>
+									<input type="text" th:field="*{firstName}" required="required" class="form-control" th:value="${customer.firstName}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Last Name:</label><br>
+									<input type="text" th:field="*{lastName}" required="required" class="form-control" th:value="${customer.lastName}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Phone Number:</label><br>
+									<input type="text" th:field="*{phoneNum}" required="required" class="form-control" th:value="${customer.phoneNum}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Email:</label><br>
+									<input type="email" th:field="*{email}" required="required" class="form-control" th:value="${customer.email}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Address:</label><br>
+									<input type="text" th:field="*{address}" required="required" class="form-control" th:value="${customer.address}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Password:</label><br>
+									<input type="password" th:field="*{password}" required="required" class="form-control">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Confirm Password:</label><br>
+									<input type="password" required="required" class="form-control">
+								</div>
+								<br><br>
+								<button type="submit" class="btn btn-primary btn-block mt-1">Submit</button>
+								<input type="reset" value="Reset" style = "background-color:#c63535; color:#ffffff;"/>
 							</div>
-							<div class="col-md-6 form-group">
-								<label>Last Name:</label> <br>
-						
-								<input type="text" th:field="*{lastName}" required="required" class="form-control" th:value="${customer.lastName}">
-							</div>
-							<div class="col-md-6 form-group">
-								<label >Phone Number:</label> <br>
-						
-								<input type="text" th:field="*{phoneNum}" required="required" class="form-control" th:value="${customer.phoneNum}">
-							</div>
-							<div class="col-md-6 form-group">
-								<label >E-mail:</label> <br>
-						
-								<input type="email" th:field="*{email}" required="required" class="form-control" th:value="${customer.email}">
-							</div>
-							<div class="col-md-6 form-group">
-								<label>Address:</label> <br>
-						
-								<input type="text" th:field="*{address}" required="required" class="form-control" th:value="${customer.address}">
-							</div>
-							<div class="col-md-6 form-group">
-								<label>Password:</label> <br>
-						
-								<input type="password" th:field="*{password}" required="required">
-							</div>
-							<div class="col-md-6 form-group">
-								<label>Confirm Password:</label> <br>
-								<input type="password" name="Password" id="Name" required="required">
-							</div>
-						
-						<br><br>
-							<button  type="submit" class="btn btn-primary btn-block mt-1">Submit</button>
-							<input type="reset" value="Reset" style = "background-color:#c63535; color: #ffffff;"/>
-						
 						</form>
-				</div>
+					</div>
+				</div>	
 			</main>
-		</div>
 		<div th:replace="partials/footer :: footer"></div>
 	</body>
 </html>

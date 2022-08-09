@@ -18,17 +18,17 @@ public class UserController {
     These account URL variable may need to be deleted. when the account link is clicked from the homepage, it should direct
     the user to the Customer controller pathVariable /account/{id} if authorized.
      */
-    @RequestMapping ( "/account")
+    @RequestMapping ("/account")
     public String accountPage(){
-        return "account";
+        return "customer/account";
     }
-    @RequestMapping ( "/appointment")
+    @RequestMapping ("/appointment")
     public String appointmentPage(){
-        return "appointment";
+        return "customer/appointment";
     }
-    @RequestMapping ( "/paws")
+    @RequestMapping ("/paws")
     public String pawsPage(){
-        return "paws";
+        return "customer/paws";
     }
 
     /*
@@ -36,9 +36,9 @@ public class UserController {
     The Following 2 controllers are meant to do the same thing.
     The /signup controller will need alterations in order to save the newly registered user to the repo.
      */
-    @RequestMapping ( "/signup")
-    public String signUpPage(Customer customer){
-        return "signup";
+    @RequestMapping ("/signup")
+    public String signUpPage(Customer customer) {
+        return "customer/signup";
     }
 
     @PostMapping("/registration_processed")
