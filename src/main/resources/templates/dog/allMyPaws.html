@@ -10,9 +10,16 @@
 					<div class="AccInfo" th:each="dog, i : ${dogs}">
 						<h2 th:text="${'Pet ' + {i.index + 1} + ' Information:'}"></h2>
 						<img th:src="@{/images/puppy.jpg}" style="height:30%;width:30%" height="183" width="275" alt="Dog Profile Picture" />
-						
+						<p th:text="${'Name: ' + dog.name}"></p>
+						<p th:text="${'Breed: ' + dog.breed}"></p>
+						<p th:text="${'Size: ' + dog.size + ' inches'}"></p>
+						<p th:text="${'Weight: ' + dog.weight + ' pounds'}"></p>
+						<p th:text="${'Color: ' + dog.color}"></p>
+						<p th:text="${'Temperament: ' + dog.temperament}"></p>
+						<p th:text="${'Notes: ' + dog.notes}"></p>
 						<a th:href="@{'/account/' + ${customer.id} + '/dog/' + ${dog.id} + '/edit'}"><button class="subButton">Edit Dog</button></a>
 					</div>
+					<br />
 					<a th:href="@{'/account/' + ${customer.id} + '/dog/new'}"><button class="subButton">Add Dog</button></a>
 				</div>
 			</main>
