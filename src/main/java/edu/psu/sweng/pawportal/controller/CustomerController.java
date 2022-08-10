@@ -1,9 +1,11 @@
 package edu.psu.sweng.pawportal.controller;
 
 import org.springframework.ui.Model;
+import edu.psu.sweng.pawportal.models.Dog;
 import edu.psu.sweng.pawportal.models.Customer;
 import edu.psu.sweng.pawportal.models.CustomerUserDetails;
 import org.springframework.stereotype.Controller;
+import edu.psu.sweng.pawportal.repository.DogRepository;
 import edu.psu.sweng.pawportal.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class CustomerController {
     @Autowired
     public CustomerRepository repo;
+    @Autowired
+    public DogRepository dogRepo;
 
     // no customer
     @GetMapping("/account")
@@ -58,6 +62,9 @@ public class CustomerController {
     public String deleteCustomer(Model model, @PathVariable("userID") long userID) {
         if (CustomerUserDetails.getLoggedIn() != userID) {
             return "redirect:/";
+        }
+        for (Dog d : dogRepo.findByOwnerId(userID)) {
+            dogRepo.delete(d);
         }
         repo.delete(repo.findById(userID));
         CustomerUserDetails.setLoggedIn(0);
