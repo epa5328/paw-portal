@@ -6,7 +6,7 @@
 			</a>
 		</h1>
     </header>
-    <h2 th:if="${customer ne null}" th:text="${'Hi, ' + customer.firstName + '!'}"}></h2>
+    <h2 th:if="${customer ne null and customer.firstName ne null}" th:text="${'Hi, ' + customer.firstName + '!'}"}></h2>
     <nav th:if="${customer ne null}">
         <a th:href="@{/}">Home</a>&nbsp;
         <a th:href="@{'/account/' + ${customer.id}}">My Account</a>&nbsp;
