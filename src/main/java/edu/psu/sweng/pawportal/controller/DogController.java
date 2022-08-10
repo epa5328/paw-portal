@@ -76,4 +76,14 @@ public class DogController {
         // SQL query: grab dog info given ID of customer
         return "dogInfoPage";
     }
+
+        // delete dog
+        @PostMapping("/account/{userID}/dog/{dogID}/delete") // doesn't work with delete method
+        public String deleteDog(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID) {
+            if (CustomerUserDetails.getLoggedIn() != userID) {
+                return "redirect:/";
+            }
+            repo.delete(repo.findById(dogID));
+            return "redirect:/account/{userID}/paws";
+        }
 }

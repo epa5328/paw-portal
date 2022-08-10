@@ -7,4 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface DogRepository extends CrudRepository<Dog, Long> {
     @Query("SELECT u FROM Dog u WHERE u.ownerId = ?1")
     Dog[] findByOwnerId(long id);
+
+    @Query("SELECT u FROM Dog u WHERE u.id = ?1")
+    Dog findById(long id);
 }

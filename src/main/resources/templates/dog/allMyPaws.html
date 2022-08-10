@@ -18,6 +18,10 @@
 						<p th:text="${'Temperament: ' + dog.temperament}"></p>
 						<p th:text="${'Notes: ' + dog.notes}"></p>
 						<a th:href="@{'/account/' + ${customer.id} + '/dog/' + ${dog.id} + '/edit'}"><button class="subButton">Edit Dog</button></a>
+						<br /><br />
+						<form th:action="@{'/account/' + ${customer.id} + '/dog/' + ${dog.id} + '/delete'}" method="post">
+							<button type="submit" class="subButton" onclick="if (!confirm('Are you sure?')) return false;">Remove Dog</button>
+						</form>
 					</div>
 					<br />
 					<a th:href="@{'/account/' + ${customer.id} + '/dog/new'}"><button class="subButton">Add Dog</button></a>
