@@ -8,13 +8,21 @@ public class Dog {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    protected String name;
+    @Column(nullable = false, length = 64)
+    private String name;
+    @Column(nullable = false)
     private long ownerId;
+    @Column(nullable = false, length = 64)
     private String breed;
+    @Column(nullable = false)
     private int size; //in inches
+    @Column(nullable = false)
     private double weight; //in pounds
+    @Column(nullable = false, length = 64)
     private String color;
+    @Column(nullable = false, length = 64)
     private String temperament;
+    @Column(nullable = true, length = 256)
     private String notes;
 
     public Dog() {
