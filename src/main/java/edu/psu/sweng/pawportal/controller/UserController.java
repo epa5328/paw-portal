@@ -21,19 +21,19 @@ public class UserController {
      * but live in the customer folder
      */
     @RequestMapping ("/account")
-    public String accountPage(){
+    public String accountPage() {
         return "customer/account";
     }
     @RequestMapping ("/appointment")
-    public String appointmentPage(){
+    public String appointmentPage() {
         return "customer/appointment";
     }
     @RequestMapping ("/paws")
-    public String pawsPage(){
+    public String pawsPage() {
         return "customer/paws";
     }
     @RequestMapping ("/signup")
-    public String signUpPage() {
+    public String signUpPage(Customer customer) {
         return "customer/signup";
     }
 
