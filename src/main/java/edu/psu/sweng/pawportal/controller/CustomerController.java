@@ -3,7 +3,6 @@ package edu.psu.sweng.pawportal.controller;
 import org.springframework.ui.Model;
 import edu.psu.sweng.pawportal.models.Customer;
 import edu.psu.sweng.pawportal.models.CustomerUserDetails;
-
 import org.springframework.stereotype.Controller;
 import edu.psu.sweng.pawportal.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;

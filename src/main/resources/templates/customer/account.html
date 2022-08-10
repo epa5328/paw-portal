@@ -35,6 +35,8 @@
 					<form th:action="@{'/account/' + ${customer.id} + '/signout'}" method="post">
 						<button type="submit" class="subButton" onclick="if (!confirm('Are you sure?')) return false;">Log Out</button>
 					</form>
+					<br />
+					<a th:href="@{'/account/' + ${customer.id} + '/dog/new'}"><button class="subButton">Add Dog</button></a>
 				</div>
 			</main>
 		</div>

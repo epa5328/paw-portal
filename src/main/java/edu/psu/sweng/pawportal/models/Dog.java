@@ -14,13 +14,13 @@ public class Dog {
     private int size; //in inches
     private double weight; //in pounds
     private String color;
-    private int temperament; //from 1 to 10
+    private String temperament;
     private String notes;
 
     public Dog() {
     }
 
-    public Dog(String name, long ownerId, String breed, int size, double weight, String color, int temperament, String notes) {
+    public Dog(String name, long ownerId, String breed, int size, double weight, String color, String temperament, String notes) {
         this.name = name;
         this.ownerId = ownerId;
         this.breed = breed;
@@ -87,11 +87,11 @@ public class Dog {
         this.color = color;
     }
 
-    public int getTemperament() {
+    public String getTemperament() {
         return temperament;
     }
 
-    public void setTemperament(int temperament) {
+    public void setTemperament(String temperament) {
         this.temperament = temperament;
     }
 
