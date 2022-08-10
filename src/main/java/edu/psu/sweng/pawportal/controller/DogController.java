@@ -47,7 +47,7 @@ public class DogController {
         }
         dog.setOwnerId(userID);
         repo.save(dog);
-        return "dog/allMyPaws";
+        return "redirect:/account/{userID}/paws";
     }
     
     // edit dog
