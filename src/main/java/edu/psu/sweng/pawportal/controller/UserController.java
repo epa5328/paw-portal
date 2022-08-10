@@ -24,7 +24,7 @@ public class UserController {
 
     @PostMapping("/registration_processed")
     public String processRegistration(Customer customer){
-        if (repo.findByEmail(customer.getEmail()) != null) {
+        if (repo.findByEmail(customer.getEmail().toLowerCase()) != null) {
             return "customer/RegistrationUnsuccessful";
         }
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
