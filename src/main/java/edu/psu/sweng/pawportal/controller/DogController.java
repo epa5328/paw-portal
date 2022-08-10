@@ -42,6 +42,7 @@ public class DogController {
     // add dog
     @PostMapping("/account/{userID}/dog/new")
     public String addDog(Model model, @PathVariable("userID") long userID, Dog dog) {
+        dog.setOwnerId(userID);
         repo.save(dog);
         return "redirect:/account/" + userID;
     }
