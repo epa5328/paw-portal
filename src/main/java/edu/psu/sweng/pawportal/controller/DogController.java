@@ -29,17 +29,6 @@ public class DogController {
         return "dog/allMyPaws";
     }
 
-    // show dog
-    @GetMapping("/account/{userID}/dog/{dogID}")
-    public String showDog(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID) {
-        if (CustomerUserDetails.getLoggedIn() != userID) {
-            return "redirect:/";
-        }
-        model.addAttribute("customer", custRepo.findById(userID));
-        model.addAttribute("dog", repo.findById(userID));
-        return "dogInfoPage";
-    }
-
     // create dog
     @GetMapping("/account/{userID}/dog/new")
     public String createDog(Model model, @PathVariable("userID") long userID, Dog dog) {
@@ -72,7 +61,7 @@ public class DogController {
         return "dog/editSomeDog";
     }
 
-    // update dog (new/edit)
+    // update dog
     @PostMapping("/account/{userID}/dog/{dogID}")
     public String updateCustomer(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID, Dog dog) {
         if (CustomerUserDetails.getLoggedIn() != userID) {

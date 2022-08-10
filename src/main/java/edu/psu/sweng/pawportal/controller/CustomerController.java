@@ -30,13 +30,6 @@ public class CustomerController {
         model.addAttribute("customer", repo.findById(userID));
         return "customer/account";
     }
-
-    // create customer
-    @GetMapping("/account/new")
-    public String createCustomer(Customer customer) {
-        // no customer attributes to inject
-        return "newCustomerPage";
-    }
     
     // edit customer
     @GetMapping("/account/{userID}/edit")
@@ -48,7 +41,7 @@ public class CustomerController {
         return "customer/editcust";
     }
 
-    // update customer (new/edit)
+    // update customer
     @PostMapping("/account/{userID}")
     public String updateCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
         if (CustomerUserDetails.getLoggedIn() != userID) {
@@ -62,7 +55,7 @@ public class CustomerController {
 
     // delete customer
     @PostMapping("/account/{userID}/delete") // doesn't work with delete method
-    public String deleteCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
+    public String deleteCustomer(Model model, @PathVariable("userID") long userID) {
         if (CustomerUserDetails.getLoggedIn() != userID) {
             return "redirect:/";
         }
@@ -73,7 +66,7 @@ public class CustomerController {
 
     // delete user session
     @PostMapping("/account/{userID}/signout")
-    public String deleteUserSession(Model model, @PathVariable("userID") long userID, Customer customer) {
+    public String deleteUserSession(Model model, @PathVariable("userID") long userID) {
         if (CustomerUserDetails.getLoggedIn() != userID) {
             return "redirect:/";
         }
@@ -83,7 +76,7 @@ public class CustomerController {
 
     // show appointments
     @GetMapping("/account/{userID}/appointment")
-    public String appointment(Model model, @PathVariable("userID") long userID, Customer customer) {
+    public String appointment(Model model, @PathVariable("userID") long userID) {
         if (CustomerUserDetails.getLoggedIn() != userID) {
             return "redirect:/";
         }
