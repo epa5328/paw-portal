@@ -82,4 +82,14 @@ public class CustomerController {
         CustomerUserDetails.setLoggedIn(0);
         return "redirect:/";
     }
+
+    // delete user session
+    @PostMapping("/account/{userID}/signout")
+    public String deleteUserSession(Model model, @PathVariable("userID") long userID, Customer customer) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
+        CustomerUserDetails.setLoggedIn(0);
+        return "redirect:/";
+    }
 }
