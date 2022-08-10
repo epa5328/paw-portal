@@ -24,6 +24,9 @@ public class UserController {
 
     @PostMapping("/registration_processed")
     public String processRegistration(Customer customer){
+        if (repo.findByEmail(customer.getEmail()) != null) {
+            return "customer/RegistrationUnsuccessful";
+        }
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         String encodedPassword = encoder.encode(customer.getPassword());
         // customer object comes over with cleartext
