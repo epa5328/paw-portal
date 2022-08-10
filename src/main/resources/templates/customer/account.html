@@ -27,6 +27,10 @@
 					</p>
 					</div>
 					<a th:href="@{'/account/' + ${customer.id} + '/edit'}"><button class="subButton">Edit Information</button></a>
+					<br /><br />
+					<form th:action="@{'/account/' + ${customer.id} + '/delete'}" method="post">
+						<button type="submit" class="subButton" onclick="if (!confirm('Are you sure?')) return false;">Delete Account</button>
+					</form>
 				</div>
 			</main>
 		</div>

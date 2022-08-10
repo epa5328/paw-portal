@@ -63,12 +63,23 @@ public class CustomerController {
     // update customer (new/edit)
     @PostMapping("/account/{userID}")
     public String updateCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
-        if (CustomerUserDetails.getLoggedIn() == 0) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
             return "redirect:/";
         }
         repo.findById(userID).propagateChanges(customer); // copy in fields
         repo.save(repo.findById(userID)); // save the changes
         model.addAttribute("customer", repo.findById(userID));
         return "customer/account";
+    }
+
+    // delete customer
+    @PostMapping("/account/{userID}/delete") // doesn't work with delete method
+    public String deleteCustomer(Model model, @PathVariable("userID") long userID, Customer customer) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
+        repo.delete(repo.findById(userID));
+        CustomerUserDetails.setLoggedIn(0);
+        return "redirect:/";
     }
 }
