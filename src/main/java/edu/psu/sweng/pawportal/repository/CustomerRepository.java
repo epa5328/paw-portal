@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
     //This helps with repository search when a user is logging in
-    @Query("SELECT u FROM Customer u WHERE u.email = ?1")
+    @Query("SELECT u FROM Customer u WHERE LOWER(u.email) = LOWER(?1)")
     Customer findByEmail(String email);
 
     @Query("SELECT u FROM Customer u WHERE u.id = ?1")
