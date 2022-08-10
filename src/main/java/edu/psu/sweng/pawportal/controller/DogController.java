@@ -25,6 +25,7 @@ public class DogController {
             return "redirect:/";
         }
         model.addAttribute("customer", custRepo.findById(userID));
+        model.addAttribute("dogs", repo.findByOwnerId(userID));
         return "dog/allMyPaws";
     }
 
@@ -52,9 +53,12 @@ public class DogController {
     // add dog
     @PostMapping("/account/{userID}/dog/new")
     public String addDog(Model model, @PathVariable("userID") long userID, Dog dog) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
         dog.setOwnerId(userID);
         repo.save(dog);
-        return "redirect:/account/" + userID;
+        return "dog/allMyPaws";
     }
     
     // edit dog

@@ -1,78 +1,22 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 	<head th:replace="partials/head :: head(title='My Paws')"></head>
-	<a id = "top"></a>
+	<a id="top"></a>
 	<body>
 		<div id="wrapper">
-		<div th:replace="partials/header :: header(title='My Paws')"></div>
-		<main>
-
-			<div id="FullPageIntro" >
-
-				<div id="AccInfo">
-
-					<div id="AccInfo1">
-
-					<h2>Pet 1 Information: </h2>
-					<img src="../static/images/dog.jpg" style="height:30%;width:30%" height= "228" width = "221" alt = "Dogs Profile Picture" th:src="@{images/dog.jpg}"/>
-						<br><button class="subButton"> Add/Edit Image </button>
-					<p>
-					Name: First Last
-					<br><br>
-					Customer ID: 3412
-						<br><br>
-						Age:
-					<br><br>
-					Breed:
-
-					<br><br>
-					Color:
-					<br><br>
-					Weight:
-					<br><br>
-					Height:
-					<br><br>
-					Note:
-					</p>
-						<button class="subButton"> Edit Information </button>
-
+			<div th:replace="partials/header :: header(title='My Paws')"></div>
+			<main>
+				<div id="FullPageIntro">
+					<div class="AccInfo" th:each="dog, i : ${dogs}">
+						<h2 th:text="${'Pet ' + {i.index + 1} + ' Information:'}"></h2>
+						<img th:src="@{/images/puppy.jpg}" style="height:30%;width:30%" height="183" width="275" alt="Dog Profile Picture" />
+						
+						<a th:href="@{'/account/' + ${customer.id} + '/dog/' + ${dog.id} + '/edit'}"><button class="subButton">Edit Dog</button></a>
 					</div>
-
-
-					<div id="AccInfo2">
-
-					<h2>Pet 2 Information: </h2>
-					<img src="../static/images/puppy.jpg" style="height:30%;width:30%" height= "183" width = "275" alt = "Dogs Profile Picture" th:src="@{images/puppy.jpg}"/>
-						<br><button class="subButton"> Add/Edit Image </button>
-					<p>
-					Name: First Last
-					<br><br>
-					Customer ID: 3412
-						<br><br>
-						Age:
-					<br><br>
-					Breed:
-					<br><br>
-					Color:
-					<br><br>
-					Weight:
-					<br><br>
-					Height:
-					<br><br>
-					Note:
-					</p>
-						<button class="subButton"> Edit Information </button>
-
-					</div>
-
+					<a th:href="@{'/account/' + ${customer.id} + '/dog/new'}"><button class="subButton">Add Dog</button></a>
 				</div>
-				<a th:href="@{'/account/' + ${customer.id} + '/dog/new'}"><button class="subButton">Add Dog</button></a>
-			</div>
-
-		</main>
-
-	</div>
-	<div th:replace="partials/footer :: footer"></div>
-</body>
+			</main>
+		</div>
+		<div th:replace="partials/footer :: footer"></div>
+	</body>
 </html>
