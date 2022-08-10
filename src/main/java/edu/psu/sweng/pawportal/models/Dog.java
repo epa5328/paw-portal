@@ -110,4 +110,15 @@ public class Dog {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+
+    public void propagateChanges(Dog d) {
+        this.name = d.name;
+        this.breed = d.breed;
+        this.size = d.size;
+        this.weight = d.weight;
+        this.color = d.color;
+        this.temperament = d.temperament;
+        this.notes = d.notes;
+    }
 }

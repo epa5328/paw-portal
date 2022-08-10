@@ -63,27 +63,33 @@ public class DogController {
     
     // edit dog
     @GetMapping("/account/{userID}/dog/{dogID}/edit")
-    public String editDog(Dog dog) {
-        // inject specified dog into HTML
-        return "editDogPage";
+    public String editDog(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
+        model.addAttribute("customer", custRepo.findById(userID));
+        model.addAttribute("dog", repo.findById(dogID));
+        return "dog/editSomeDog";
     }
 
     // update dog (new/edit)
     @PostMapping("/account/{userID}/dog/{dogID}")
-    public String updateDog(Dog dog) {
-        // take parameters and save dog
-        repo.save(dog);
-        // SQL query: grab dog info given ID of customer
-        return "dogInfoPage";
+    public String updateCustomer(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID, Dog dog) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
+        repo.findById(dogID).propagateChanges(dog); // copy in fields
+        repo.save(repo.findById(dogID)); // save the changes
+        return "redirect:/account/{userID}/paws";
     }
 
-        // delete dog
-        @PostMapping("/account/{userID}/dog/{dogID}/delete") // doesn't work with delete method
-        public String deleteDog(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID) {
-            if (CustomerUserDetails.getLoggedIn() != userID) {
-                return "redirect:/";
-            }
-            repo.delete(repo.findById(dogID));
-            return "redirect:/account/{userID}/paws";
+    // delete dog
+    @PostMapping("/account/{userID}/dog/{dogID}/delete") // doesn't work with delete method
+    public String deleteDog(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
         }
+        repo.delete(repo.findById(dogID));
+        return "redirect:/account/{userID}/paws";
+    }
 }

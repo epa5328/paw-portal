@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+	<head th:replace="partials/head :: head(title='Edit Dog')"></head>
+	<a id="top"></a>
+	<body>
+		<div id="wrapper">
+			<div th:replace="partials/header :: header(title='Edit Dog')"></div>
+			<main>
+				<div id="links">
+				</div>
+				<div id="intro">
+					<div id="AccInfo">
+						<h2>Dog Information:</h2>
+						<form action="#" th:action="@{'/account/' + ${customer.id} + '/dog/' + ${dog.id}}" th:object="${dog}" method="post">
+							<div class="form-row">
+								<div class="col-md-6 form-group">
+									<label>Name:</label><br>
+									<input type="text" th:field="*{name}" required="required" class="form-control" th:value="${dog.name}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Breed:</label><br>
+									<input type="text" th:field="*{breed}" required="required" class="form-control" th:value="${dog.breed}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Size: (in inches)</label><br>
+									<input type="number" th:field="*{size}" required="required" class="form-control" th:value="${dog.size}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Weight: (in pounds)</label><br>
+									<input type="number" th:field="*{weight}" required="required" class="form-control" th:value="${dog.weight}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Color:</label><br>
+									<input type="text" th:field="*{color}" required="required" class="form-control" th:value="${dog.color}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Temperament:</label><br>
+									<input type="text" th:field="*{temperament}" required="required" class="form-control" th:value="${dog.temperament}">
+								</div>
+								<div class="col-md-6 form-group">
+									<label>Notes:</label><br>
+									<input type="textarea" th:field="*{notes}" class="form-control" th:value="${dog.notes}">
+								</div>
+								<br><br>
+								<button type="submit" class="btn btn-primary btn-block mt-1">Submit</button>
+								<input type="reset" value="Reset" style = "background-color:#c63535; color:#ffffff;"/>
+							</div>
+						</form>
+					</div>
+				</div>	
+			</main>
+		<div th:replace="partials/footer :: footer"></div>
+	</body>
+</html>
