@@ -7,6 +7,7 @@
 			<div th:replace="partials/header :: header(title='My Paws')"></div>
 			<main>
 				<div id="FullPageIntro">
+				<div id="AccInfo">
 					<div class="AccInfo" th:each="dog, i : ${dogs}">
 						<h2 th:text="${'Pet ' + {i.index + 1} + ' Information:'}"></h2>
 						<img th:src="@{/images/puppy.jpg}" style="height:30%;width:30%" height="183" width="275" alt="Dog Profile Picture" />
@@ -23,7 +24,7 @@
 							<button type="submit" class="subButton" onclick="if (!confirm('Are you sure?')) return false;">Remove Dog</button>
 						</form>
 					</div>
-					<br />
+				</div>
 					<a th:href="@{'/account/' + ${customer.id} + '/dog/new'}"><button class="subButton">Add Dog</button></a>
 				</div>
 			</main>

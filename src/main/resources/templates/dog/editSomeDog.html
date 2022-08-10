@@ -6,10 +6,9 @@
 		<div id="wrapper">
 			<div th:replace="partials/header :: header(title='Edit Dog')"></div>
 			<main>
-				<div id="links">
-				</div>
-				<div id="intro">
-					<div id="AccInfo">
+				<div id="FullPageIntro">
+					<div id = "AccInfo">
+					<div id="login">
 						<h2>Dog Information:</h2>
 						<form action="#" th:action="@{'/account/' + ${customer.id} + '/dog/' + ${dog.id}}" th:object="${dog}" method="post">
 							<div class="form-row">
@@ -42,10 +41,12 @@
 									<textarea th:field="*{notes}" class="form-control" th:text="${dog.notes}"></textarea>
 								</div>
 								<br><br>
-								<button type="submit" class="btn btn-primary btn-block mt-1">Submit</button>
-								<input type="reset" value="Reset" style = "background-color:#c63535; color:#ffffff;"/>
+								<button type="submit" class="btn btn-primary btn-block mt-1" style = "background-color: #008573; border: none; color: white; padding: 1%; text-align: center; font-weight: bold;display: inline-block;font-size: 1em;cursor: pointer;width: 25%;border-radius: 10px;">Submit</button>
+								<input type="reset" value="Reset" style = "background-color: red; border: none; color: white; padding: 1%; text-align: center; font-weight: bold;display: inline-block;font-size: 0.75em;cursor: pointer;width: 25%;border-radius: 10px;"/>
+
 							</div>
 						</form>
+					</div>
 					</div>
 				</div>	
 			</main>

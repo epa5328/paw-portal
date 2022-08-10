@@ -6,14 +6,13 @@
 		<div id="wrapper">
 			<div th:replace="partials/header :: header(title='Edit Account')"></div>
 			<main>
-				<div id="links">
-					<div id="AccInfoImg">
-						<img src="../../static/images/profilePic.jpg" height="300" width="400" alt="Profile Picture" th:src="@{/images/profilePic.jpg}">
-					</div>
-				</div>
-				<div id="intro">
-					<div id="AccInfo">
+
+				<div id="FullPageIntro">
+					<div id="login">
 						<h2>Personal Information:</h2>
+						<div id="AccInfoImg">
+							<img src="../../static/images/profilePic.jpg" height="300" width="400" alt="Profile Picture" th:src="@{/images/profilePic.jpg}">
+						</div>
 						<form action="#" th:action="@{'/account/' + ${customer.id}}" th:object="${customer}" method="post">
 							<div class="form-row">
 								<div class="col-md-6 form-group">
@@ -46,7 +45,8 @@
 								</div>
 								<br><br>
 								<button type="submit" class="subButton">Submit</button>
-								<input type="reset" value="Reset" style="background-color:#c63535; color:#ffffff;" />
+								<input type="reset" value="Reset" style = "background-color: red; border: none; color: white; padding: 1%; text-align: center; font-weight: bold;display: inline-block;font-size: 0.75em;cursor: pointer;width: 25%;border-radius: 10px;"/>
+
 							</div>
 						</form>
 					</div>

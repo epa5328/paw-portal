@@ -6,14 +6,12 @@
 		<div id="wrapper">
 			<div th:replace="partials/header :: header(title='My Account')"></div>
 			<main>
-			<div id="links">
-				<div id="AccInfoImg">
-					<img src="../../static/images/profilePic.jpg" height="300" width="400" alt="Profile Picture" th:src="@{/images/profilePic.jpg}">
-				</div>
-			</div>
-			<div id="intro" >
+			<div id="FullPageIntro" >
 				<div id="AccInfo">
 					<h2>Personal Information:</h2>
+					<div id="AccInfoImg">
+						<img src="../../static/images/profilePic.jpg" height="300" width="400"  alt="Profile Picture" th:src="@{/images/profilePic.jpg}">
+					</div>
 					<p>
 						Name: <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
 						<br><br>

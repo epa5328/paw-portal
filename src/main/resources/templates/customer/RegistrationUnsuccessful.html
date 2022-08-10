@@ -6,7 +6,12 @@
 		<div id="wrapper">
 		<div th:replace="partials/header :: header(title='Registration Successful')"></div>
 <main>
-    Your email address was already used to make an account here. <a href="/">Home</a>
+	<div id="FullPageIntro">
+		<div id="AccInfo">
+			<h2>Registration Unsuccessful </h2>
+			<H4> Your email address was already used to make an account here. Go to <a href="/">Home</a></H4>
+		</div>
+	</div>
 </main>
 </div>
 <div th:replace="partials/footer :: footer"></div>
