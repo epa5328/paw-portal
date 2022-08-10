@@ -80,6 +80,8 @@ public class CustomerController {
         if (CustomerUserDetails.getLoggedIn() != userID) {
             return "redirect:/";
         }
+        // customer object just in case
+        model.addAttribute("customer", repo.findById(userID));
         return "customer/appointment";
     }
 }

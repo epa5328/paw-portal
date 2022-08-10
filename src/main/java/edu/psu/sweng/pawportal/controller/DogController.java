@@ -1,11 +1,11 @@
 package edu.psu.sweng.pawportal.controller;
 
-import edu.psu.sweng.pawportal.models.Dog;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import edu.psu.sweng.pawportal.models.Dog;
 import edu.psu.sweng.pawportal.models.CustomerUserDetails;
-import edu.psu.sweng.pawportal.repository.CustomerRepository;
+import org.springframework.stereotype.Controller;
 import edu.psu.sweng.pawportal.repository.DogRepository;
+import edu.psu.sweng.pawportal.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;

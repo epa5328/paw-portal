@@ -1,13 +1,15 @@
 package edu.psu.sweng.pawportal.controller;
 
+//import org.springframework.ui.Model;
 import edu.psu.sweng.pawportal.models.Customer;
 import edu.psu.sweng.pawportal.models.CustomerUserDetails;
+import org.springframework.stereotype.Controller;
 import edu.psu.sweng.pawportal.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
 
 @Controller
 public class UserController {
@@ -15,7 +17,7 @@ public class UserController {
     @Autowired
     public CustomerRepository repo;
 
-    @RequestMapping ("/signup")
+    @GetMapping("/signup")
     public String signUpPage(Customer customer) {
         return "customer/signup";
     }
