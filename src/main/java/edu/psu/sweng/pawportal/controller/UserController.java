@@ -34,9 +34,8 @@ public class UserController {
     @PostMapping("/login")
     public String processLogin(Customer customer) {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        String encodedPassword = encoder.encode(customer.getPassword());
         Customer accountCust = repo.findByEmail(customer.getEmail());
-        if (encodedPassword.equals(accountCust.getPassword())) {
+        if (encoder.matches(customer.getPassword(), accountCust.getPassword())) {
             CustomerUserDetails.setLoggedIn(accountCust.getId());
             return "redirect:/account/" + accountCust.getId();
         }
