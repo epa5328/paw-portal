@@ -6,11 +6,18 @@
 			</a>
 		</h1>
     </header>
-    <nav>
+    <nav th:if="${customer ne null}">
         <a th:href="@{/}">Home</a>&nbsp;
-        <a th:href="@{/account/1}">My Account</a>&nbsp;
-        <a th:href="@{/account/1/paws}">My Paws</a>&nbsp;
-        <a th:href="@{/account/1/appointment}">Appointments</a>&nbsp;
+        <a th:href="@{'/account/' + ${customer.id}}">My Account</a>&nbsp;
+        <a th:href="@{'/account/' + ${customer.id} + '/paws'}">My Paws</a>&nbsp;
+        <a th:href="@{'/account/' + ${customer.id} + '/appointment'}">Appointments</a>&nbsp;
         <a th:href="@{/contact_us}">Contact Us</a>&nbsp;
     </nav>
+    <nav th:if="${customer eq null}">
+      <a th:href="@{/}">Home</a>&nbsp;
+      <a th:href="@{/}">My Account</a>&nbsp;
+      <a th:href="@{/}">My Paws</a>&nbsp;
+      <a th:href="@{/}">Appointments</a>&nbsp;
+      <a th:href="@{/contact_us}">Contact Us</a>&nbsp;
+  </nav>
 </div>
