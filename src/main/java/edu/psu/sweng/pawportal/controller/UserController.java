@@ -41,6 +41,7 @@ public class UserController {
     public String processLogin(Customer customer) {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         Customer accountCust = repo.findByEmail(customer.getEmail());
+        if (accountCust == null) { return "redirect:/"; } // FAIL!
         if (encoder.matches(customer.getPassword(), accountCust.getPassword())) {
             CustomerUserDetails.setLoggedIn(accountCust.getId());
             return "redirect:/account/" + accountCust.getId();
