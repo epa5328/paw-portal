@@ -315,3 +315,8 @@ footer {
     overflow: auto;
   }
 }
+
+textarea {
+  width: 193px;
+  height: 59px;
+}
