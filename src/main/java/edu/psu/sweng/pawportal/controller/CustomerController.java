@@ -20,17 +20,6 @@ public class CustomerController {
     public String noCustomer() {
         return "redirect:/";
     }
-    // some customer
-    @GetMapping("/customer")
-    public String someCustomer() {
-        return noCustomer();
-    }
-
-    // customer stuff
-    @GetMapping("/customer/{page}")
-    public String customerStuff(@PathVariable("page") String page) {
-        return "customer/" + page;
-    } 
 
     // show customer
     @GetMapping("/account/{userID}")
@@ -90,5 +79,14 @@ public class CustomerController {
         }
         CustomerUserDetails.setLoggedIn(0);
         return "redirect:/";
+    }
+
+    // show appointments
+    @GetMapping("/account/{userID}/appointment")
+    public String appointment(Model model, @PathVariable("userID") long userID, Customer customer) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
+        return "customer/appointment";
     }
 }

@@ -15,23 +15,6 @@ public class UserController {
     @Autowired
     public CustomerRepository repo;
 
-    /*
-     * for convenience in the HTML
-     * these links are simple as typed
-     * but live in the customer folder
-     */
-    @RequestMapping ("/account")
-    public String accountPage() {
-        return "customer/account";
-    }
-    @RequestMapping ("/appointment")
-    public String appointmentPage() {
-        return "customer/appointment";
-    }
-    @RequestMapping ("/paws")
-    public String pawsPage() {
-        return "customer/paws";
-    }
     @RequestMapping ("/signup")
     public String signUpPage(Customer customer) {
         return "customer/signup";

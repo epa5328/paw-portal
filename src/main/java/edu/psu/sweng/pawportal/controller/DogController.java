@@ -18,6 +18,16 @@ public class DogController {
     @Autowired
     public CustomerRepository custRepo;
 
+    // show dogs
+    @GetMapping("/account/{userID}/paws")
+    public String showDogs(Model model, @PathVariable("userID") long userID) {
+        if (CustomerUserDetails.getLoggedIn() != userID) {
+            return "redirect:/";
+        }
+        model.addAttribute("customer", custRepo.findById(userID));
+        return "dog/allMyPaws";
+    }
+
     // show dog
     @GetMapping("/account/{userID}/dog/{dogID}")
     public String showDog(Model model, @PathVariable("userID") long userID, @PathVariable("dogID") long dogID) {
